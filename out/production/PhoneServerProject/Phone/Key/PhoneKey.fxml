@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+
+
+<fx:root fx:id="PhoneKeyButton" mnemonicParsing="false" prefHeight="48.0" prefWidth="74.0" text="Button" type="Button" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" />

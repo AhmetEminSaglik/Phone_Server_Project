@@ -1,0 +1,11 @@
+        Eksiklikler
+1-) Arama ekranina gecis yaptiktan sonra phone.setOnCloseRequest() func. degistirildigi icin onu eski haline getirilmesi gerekiyor
+	--> Bunun icin setOnCloseRequest icin bir class acip hem phone olusturulurken hemde baska yerlerde bu classtan cagirilip func. eklenmesi gerekiyor
+	[List <EventHandler<ActionEvent>>  list olmali ve bunun icine istenilen ozelliklerin eklenebiliyor olmasi gerekiyor]
+
+2-) Aramalar ve mesajlasmalar (icerik, sure, kimden kime... ) bilgilerinin xml file ile tutulmasi gerekiyor.
+
+3-) Mesajlasma ekrani kaldi
+
+4-) Tuslardan suanlik sadece sayi alinabiliyor, String deger almayi da eklemem lazim
+✓✓✓✓✓✓

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="180.0" prefWidth="349.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="lblContactInfo" alignment="CENTER" layoutX="6.0" layoutY="14.0" prefHeight="38.0" prefWidth="257.0" text="Name" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Label fx:id="lblTime" alignment="CENTER" layoutY="90.0" prefHeight="38.0" prefWidth="257.0" text="Time  " AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Label fx:id="lblSituation" alignment="CENTER" layoutX="25.0" layoutY="52.0" prefHeight="38.0" prefWidth="257.0" text="Situation" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   </children>
+</AnchorPane>
