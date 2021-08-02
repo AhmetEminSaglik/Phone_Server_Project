@@ -23,6 +23,14 @@ public abstract class BaseMessage {
         this.baseScreen = new ReadMessageScreen(phone, this,messageHistory);
     }
 
+    public Phone getPhone() {
+        return phone;
+    }
+
+    public void setPhone(Phone phone) {
+        this.phone = phone;
+    }
+
     public Contact getMessageContact() {
         return messageContact;
     }

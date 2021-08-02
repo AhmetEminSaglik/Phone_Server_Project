@@ -13,11 +13,7 @@ public class UpdationRegisteredPhoneCardSituation {
         setColorRegisteredCardPhoneSituationColorAtCreating(registeredPhoneCard);
         closeRequestChangeRegisteredCardPhoneSituationColor(registeredPhoneCard);
     }
-//
-//    void setRegisterPhoneCardAllSituationColors(RegisteredPhoneCard registeredPhoneCard) {
-//        setColorRegisteredCardPhoneSituationColorAtCreating(registeredPhoneCard);
-//        closeRequestChangeRegisteredCardPhoneSituationColor(registeredPhoneCard);
-//    }
+
 
     /**
      * when phone is created, will have situation color also it will have quality with

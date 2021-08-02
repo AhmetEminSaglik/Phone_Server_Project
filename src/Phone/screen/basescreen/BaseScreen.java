@@ -6,7 +6,8 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public abstract class BaseScreen extends AnchorPane {
+public abstract class
+BaseScreen extends AnchorPane {
     protected Phone phone;
     //    protected String fxmlPath;
     protected BaseScreenController baseScreenController;

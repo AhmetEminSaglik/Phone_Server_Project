@@ -11,7 +11,7 @@ public class TimeForClickValue {
 
     private int interval;
     Timer timer;
-    final int waitingSecond = 3;
+    final int waitingSecond =2;
     int clickValue = 0;
     final int delay = 1000;
     final int period = 1000;

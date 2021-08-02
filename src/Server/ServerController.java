@@ -1,6 +1,7 @@
 package server;
 
-import archive.Archive;
+//import archive.Archive;
+
 import javafx.event.EventHandler;
 import javafx.scene.Node;
 import javafx.scene.control.ScrollBar;
@@ -37,6 +38,7 @@ ServerController implements Initializable {
 
     RegisteredPhoneInServer registeredPhoneInServer = new RegisteredPhoneInServer();
     Server server;
+
     public ServerController(Server server) {
         this.server = server;
     }
@@ -77,23 +79,12 @@ ServerController implements Initializable {
         txtGivenPhoneNumber.setText("");
     }
 
-/*
-//  !!! when new phone added and if it is not able to reach it then this function must be activated
-    public void updateAllPhonesServer() {
-        for (int i = 0; i < registeredPhoneList.size(); i++) {
-            registeredPhoneList.get(i).setServer(server);
-        }
-
-    }*/
-
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-//        prepareScrolBar();
+
         for (int i = 0; i < 2; i++) {
             addPhoneNumber("" + (i + 1));
         }
-//        updateAllPhonesServer();
     }
 
     /**
@@ -116,11 +107,7 @@ ServerController implements Initializable {
         return null;
     }
 
-
-    //Contact contactWhoIsCallingSomeone, Contact contactWhoWillAnswerCall
     public void callNumber(Contact contactWhoIsCallingSomeone, Contact contactWhoWillAnswerCall) { // who is being call --> callingContact / who calls --> comingCallContact
-//        Phone dialedPhone = findPhoneByNumber(contactWhoWillAnswerCall.getPhoneNumber());
-//        Phone callerPhone = findPhoneByNumber(contactWhoIsCallingSomeone.getPhoneNumber()).getPhoneController().getPhone();
 
         SettingTwoPhoneForCallingConnection connectionTwoPhone = new SettingTwoPhoneForCallingConnection(
                 findRegisteredPhoneCard(contactWhoIsCallingSomeone.getPhoneNumber()),
@@ -133,32 +120,6 @@ ServerController implements Initializable {
         connectPhone.sendMessage();
 
     }
-
-//    void prepareScrolBar() {
-//        double HBoxPaneHeight = getHeight(HBoxRegisterPhoneArea);
-//        double VBoxPaneHeight = getHeight(HBoxRegisterPhoneArea);
-//        double SBMinHeight = HBoxPaneHeight;
-//        double SBMaxHeight = VBoxPaneHeight;
-//
-////        serverScrolBar.setValue(0);
-////        serverScrolBar.setOnScroll(scrollBarEvent(serverScrolBar));
-//    }
-//
-///*    EventHandler<ScrollEvent> scrollBarEvent(ScrollBar scrollBar) {
-//        return new EventHandler<ScrollEvent>() {
-//            @Override
-//            public void handle(ScrollEvent scrollEvent) {
-//                double val = scrollBar.getValue();
-//                scrollBar.setValue(val++);
-//
-//            }
-//        };
-//    }*/
-//
-//    double getHeight(Pane pane) {
-//        return pane.getHeight();
-//    }
-
 
 
 }

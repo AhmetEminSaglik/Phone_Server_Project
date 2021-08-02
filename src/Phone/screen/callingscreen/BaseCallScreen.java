@@ -13,7 +13,7 @@ public abstract class BaseCallScreen extends BaseScreen {
 //        loadFxmlFile("BaseCallScreen.fxml");
 //    }
 
-    public BaseCallScreen(Phone phone, BaseCallScreenController callingScreenController) {
+    public BaseCallScreen(Phone phone,  BaseCallScreenController callingScreenController) {
         super(phone);
          this.baseScreenController = callingScreenController;
         contact = callingScreenController.contact;

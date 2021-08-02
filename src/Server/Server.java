@@ -1,24 +1,26 @@
 package server;
 
-import archive.Archive;
+//import archive.Archive;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import mynote.MyNote;
 
-import java.io.File;
+import server.registeredphonecard.archive.RecordServer;
+import server.registeredphonecard.archive.XMLFileOperation;
 
 public class Server extends Application {
-    private ServerController serverController = new ServerController(this);
-    Archive archive= new Archive();
+    private server.ServerController serverController = new server.ServerController(this);
+
+    XMLFileOperation xmlFileOperation = new XMLFileOperation(this);
+    RecordServer recordServer;
+
 
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-
-//        XMLFile xmlFile= new XMLFile();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Server.fxml"));
         fxmlLoader.setController(serverController);
         Parent root = fxmlLoader.load();
@@ -28,30 +30,33 @@ public class Server extends Application {
         primaryStage.setTitle("Phone Server");
         primaryStage.setWidth(500);
         primaryStage.setHeight(600);
-//        primaryStage.setResizable(false);
+
         primaryStage.setOnCloseRequest(e -> {
             System.exit(0);
         });
         primaryStage.show();
-//        notuGoster();
+
     }
 
     public static void main(String[] args) {
         launch(args);
     }
 
-    public void notuGoster() {
-        String text = " ";
-        MyNote.showinOutPut(getClass(), text);
-
-
-    }
-    public Archive getArchive() {
-        return archive;
-    }
     public ServerController getServerController() {
         return serverController;
     }
 
+    public XMLFileOperation getXmlFileOperation() {
+        return xmlFileOperation;
+    }
 
+    public RecordServer getRecordServer() {
+        if (recordServer == null)
+            recordServer = new RecordServer();
+        return recordServer;
+    }
+
+    public void setRecordServer(RecordServer recordServer) {
+        this.recordServer = recordServer;
+    }
 }

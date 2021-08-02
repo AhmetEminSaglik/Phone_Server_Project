@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RegisteredPhoneInServer {
-    //    List<Phone> list = new ArrayList<Phone>();
+
     List<RegisteredPhoneCard> list = new ArrayList<RegisteredPhoneCard>();
 
     public void add(RegisteredPhoneCard registeredPhoneCard) {

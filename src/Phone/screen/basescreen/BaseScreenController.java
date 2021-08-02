@@ -11,7 +11,8 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public abstract class BaseScreenController implements Initializable {
+public abstract class
+BaseScreenController implements Initializable {
     protected Phone phone;
 
     protected NumberKeyEvent numberKeyEvent;

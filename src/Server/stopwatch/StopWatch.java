@@ -26,7 +26,7 @@ public class StopWatch {
                 minute = 0;
                 hour++;
             }
-//            secondPassed = true;
+
             Platform.runLater(new Runnable() {
                 @Override
                 public void run() {

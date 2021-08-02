@@ -1,19 +1,24 @@
 package server.connection;
 
-import mynote.MyNote;
+import date.TimeAtThatMoment;
 import phone.Phone;
-import phone.message.BaseMessage;
 import phone.message.ReceivedMessage;
+import server.registeredphonecard.archive.recordclass.RecordMessage;
 import phone.message.SentMessage;
 import phone.screen.registerednumbers.contact.Contact;
 import phone.utility.IdentifyNumber;
 import server.Server;
 import server.findnumber.FindTheNumberIsExistInServer;
+import server.registeredphonecard.archive.RecordManagement;
+import server.registeredphonecard.archive.RecordServer;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SettingTwoPhoneForSendingMessageConnection {
     Phone sendMessagePhone, receiveMessagePhone;
     Contact contact;
-    BaseMessage baseMessage;
+    //    BaseMessage baseMessage;
     FindTheNumberIsExistInServer findTheNumberIsExistInServer;
     String messageText;
 
@@ -21,52 +26,76 @@ public class SettingTwoPhoneForSendingMessageConnection {
         findTheNumberIsExistInServer = new FindTheNumberIsExistInServer(server);
         receiveMessagePhone = searcNumberInServer(contactReceiveMessage);
         this.sendMessagePhone = sendMessagePhone;
-//        this.receiveMessagePhone = receiveMessagePhone;
+
         this.messageText = messageText;
         this.contact = contactReceiveMessage;
-//        buildMessage(messageText);
     }
 
 
     public void sendMessage() {
-//        MyNote.showMessageDialog("Gonderenin Mesajini servere iletmeden telefonda halletmem gerekiyor sonra servere gondermem gerekiyor\n" +
-//                "burada sadece mesaji alaninin hiistorisine eklenmesi lazim");
-//        MyNote.showMessageDialog("Mesaj gonderirken ve alirken mesaj alma ve gonderme  kisminda sorun yasiyorum, ve bunlari daha  duzeltmedim");
-
-//        MessageHistoryCard messageHistoryCardForSendMessagePhone = new MessageHistoryCard(receiveMessagePhone.getNumber(), new ReadMessageScreen(sendMessagePhone));
-
-
-//        messageHistoryCardForSendMessagePhone.setMessage(baseMessage);
-//        sendMessagePhone.getMessageHistory().getSentMessageHistory().add(messageHistoryCardForSendMessagePhone);
-
-
+        SentMessage sentMessage;
         if (receiveMessagePhone != null) {
-//            MessageHistoryCard messageHistoryCardForReceiveMessagePhone = new MessageHistoryCard(sendMessagePhone.getNumber(), new ReadMessageScreen(receiveMessagePhone));
-            
+
             System.out.println(getClass().getName() + "       ===>>>> BURADA SERVERDA OLMAYAN NUMARA GIRINCE HATA ALIYORUM");
-            SentMessage sentMessage = new SentMessage(sendMessagePhone, new IdentifyNumber(sendMessagePhone).identifyNumber(receiveMessagePhone.getNumber()), messageText);
+            sentMessage = new SentMessage(sendMessagePhone, new IdentifyNumber(sendMessagePhone).identifyNumber(receiveMessagePhone.getNumber()), messageText);
             sentMessage.setMessageSent(true);
-//            System.out.println("sentMessage.setMessageSent : " + sentMessage.isMessageSent());
+
             sendMessagePhone.getMessage().getSentMessageHistory().addMessage(sentMessage);
-
-//            System.out.println("MESAJ EKLENECEK AMA receiveMessagePhone ??????????? NULL MU ?????????????????????"+receiveMessagePhone);
             ReceivedMessage receivedMessage = new ReceivedMessage(receiveMessagePhone, new IdentifyNumber(receiveMessagePhone).identifyNumber(sendMessagePhone.getNumber()), messageText);
-//            System.out.println("GONDERILECEK MESAJ BILGI : "+receivedMessage.toString());
+
+//            RecordManagement recordManagement = new RecordManagement(receiveMessagePhone.getServer());
+
+
+//            System.out.println("sentMessage.getTimeAtThatMoment()  NULL MU BAKKKK"+sentMessage.getTimeAtThatMoment()) ;
+//            recordManagement.recordMessage(getRecordServerToSaveXML(sendMessagePhone, getReceivedTextPhoneNumber(), messageText, sentMessage.getTimeAtThatMoment()));
+
+            //    saveMessageToXML(sentMessage);
             receiveMessagePhone.getMessage().getReceivedMessageHistory().addMessage(receivedMessage);
-            if(receiveMessagePhone.getStage().isShowing())
-            receiveMessagePhone.getMusicPlayer().playMusicTextNotification();
+            if (receiveMessagePhone.getStage().isShowing())
+                receiveMessagePhone.getMusicPlayer().playMusicTextNotification();
 
-
-//            messageHistoryCardForReceiveMessagePhone.setMessage(baseMessage);
-//            receiveMessagePhone.getMessageHistory().getReceivedMessageHistory().add(messageHistoryCardForReceiveMessagePhone);
-//messageHistoryCardForSendMessagePhone.getMessage()
         } else {
             System.out.println(getClass().getName() + "       ===>>>> BURADA SERVERDA OLMAYAN NUMARA GIRINCE HATA ALIYORUM");
-            SentMessage sentMessage = new SentMessage(sendMessagePhone, contact, messageText);
+            sentMessage = new SentMessage(sendMessagePhone, contact, messageText);
             sendMessagePhone.getMessage().getSentMessageHistory().addMessage(sentMessage);
 
         }
         System.out.println("MESAJLAR GONDERILDI");
+        saveMessageToXML(sentMessage);
+
+
+    }
+
+    void saveMessageToXML(SentMessage sentMessage) {
+
+        RecordManagement recordManagement = new RecordManagement(sendMessagePhone.getServer());
+//        System.out.println("sentMessage.getTimeAtThatMoment()  NULL MU BAKKKK"+sentMessage.getTimeAtThatMoment()) ;
+        recordManagement.recordMessage(getRecordServerToSaveXML(sendMessagePhone, getReceivedTextPhoneNumber(), messageText, sentMessage.getTimeAtThatMoment()));
+
+
+    }
+
+    RecordServer getRecordServerToSaveXML(Phone sentMessage, String phoneNumberReceivedMessage, String messageText, TimeAtThatMoment time) {
+        RecordServer recordServer = new RecordServer();
+        recordServer.addListMessageOpearations(getRecordMessage(sentMessage, phoneNumberReceivedMessage, messageText, time));
+        return recordServer;
+
+    }
+
+    List<RecordMessage> getRecordMessage(Phone sentMessage, String phoneNumberReceivedMessage, String messageText, TimeAtThatMoment time) {
+
+        RecordMessage recordMessage = new RecordMessage();
+
+        recordMessage.setMessage(messageText);
+        recordMessage.setPhoneSentMessage(sentMessage.getNumber());
+        recordMessage.setPhonerReceivedMessage(phoneNumberReceivedMessage);
+        System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA TIME " + time);
+        recordMessage.setTimeAtThatMoment(time.getCallTimeInString());
+
+
+        List list = new ArrayList<RecordMessage>();
+        list.add(recordMessage);
+        return list;
     }
 
     public Phone searcNumberInServer(Contact contact) {
@@ -75,4 +104,10 @@ public class SettingTwoPhoneForSendingMessageConnection {
         return findTheNumberIsExistInServer.searcNumber(contact);
     }
 
+    String getReceivedTextPhoneNumber() {
+        if (receiveMessagePhone != null)
+            return receiveMessagePhone.getNumber();
+        return "(Unknown Number) " + contact.getPhoneNumber();
+
+    }
 }

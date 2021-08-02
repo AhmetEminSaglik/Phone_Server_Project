@@ -14,6 +14,8 @@ import phone.screen.mainmenu.MainMenuScreen;
 import phone.screen.registerednumbers.contact.Contact;
 import phone.screen.textingscreen.MessageScreenController;
 import phone.utility.IdentifyNumber;
+import server.registeredphonecard.archive.RecordManagement;
+import server.registeredphonecard.archive.RecordServer;
 
 import java.util.List;
 
@@ -175,7 +177,10 @@ public class Function<T> {
 //        ((MessageScreenController) ((BaseScreen) phone.getPhoneController().getScreen()).getController()).sendMessage(contact, phone.message);
         System.out.println("ZZZZZZZZZZZZZZZZZ contact no : " + contact.getPhoneNumber());
         ((MessageScreenController) phone.getPhoneController().getScreenController()).sendMessage(contact, message);
+
+
     }
+
 
     public void updateScreenController(BaseScreenController baseScreenController) {
         baseScreenController.updateAllPhone();

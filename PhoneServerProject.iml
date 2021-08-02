@@ -8,20 +8,34 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
-      <library name="javafx-fxml">
+      <library>
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/15/javafx-fxml-15.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/15/javafx-fxml-15-win.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/15/javafx-controls-15.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/15/javafx-controls-15-win.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/15/javafx-graphics-15.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/15/javafx-graphics-15-win.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-base/15/javafx-base-15.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-base/15/javafx-base-15-win.jar!/" />
+          <root url="jar://C:/Program Files/Java/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/javafx-swt.jar!/" />
+          <root url="jar://C:/Program Files/Java/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/javafx.base.jar!/" />
+          <root url="jar://C:/Program Files/Java/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/javafx.controls.jar!/" />
+          <root url="jar://C:/Program Files/Java/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/javafx.fxml.jar!/" />
+          <root url="jar://C:/Program Files/Java/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/javafx.graphics.jar!/" />
+          <root url="jar://C:/Program Files/Java/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/javafx.media.jar!/" />
+          <root url="jar://C:/Program Files/Java/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/javafx.swing.jar!/" />
+          <root url="jar://C:/Program Files/Java/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/javafx.web.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="jar://C:/Program Files/Java/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src.zip!/javafx.base" />
+          <root url="jar://C:/Program Files/Java/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src.zip!/javafx.controls" />
+          <root url="jar://C:/Program Files/Java/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src.zip!/javafx.fxml" />
+          <root url="jar://C:/Program Files/Java/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src.zip!/javafx.graphics" />
+          <root url="jar://C:/Program Files/Java/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src.zip!/javafx.media" />
+          <root url="jar://C:/Program Files/Java/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src.zip!/javafx.swing" />
+          <root url="jar://C:/Program Files/Java/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src.zip!/javafx.web" />
+        </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="com.sun.xml.bind:jaxb-impl:2.3.2" level="project" />
+    <orderEntry type="library" name="javax.xml.bind:jaxb-api:2.4.0-b180830.0359" level="project" />
+    <orderEntry type="library" name="org.glassfish.jaxb:jaxb-runtime:2.3.4" level="project" />
+    <orderEntry type="library" name="org.glassfish.jaxb:jaxb-runtime:3.0.2-b01" level="project" />
+    <orderEntry type="library" name="javax.activation:activation:1.1.1" level="project" />
+    <orderEntry type="library" name="jakarta.xml.bind:jakarta.xml.bind-api:3.0.1" level="project" />
   </component>
 </module>
