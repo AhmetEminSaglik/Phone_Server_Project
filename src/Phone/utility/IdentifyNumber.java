@@ -13,11 +13,9 @@ public class IdentifyNumber {
     public Contact identifyNumber(String phoneNumber) {
         Contact contact = phone.getRegisteredContact().getContactByPhoneNumber(phoneNumber);
         if (contact != null) {
-            System.out.println("CONTACTY NULL DEGILLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
             return contact;
         }
         contact = new Contact(null, phoneNumber);
-        System.out.println(getClass().getName() + " --> Person is empty. So it is created here to not return null by just number / PHone Number :" +phoneNumber);
         return contact;
     }
 }

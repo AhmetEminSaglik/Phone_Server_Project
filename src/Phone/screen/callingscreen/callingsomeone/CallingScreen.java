@@ -8,6 +8,5 @@ public class CallingScreen extends BaseCallScreen {
 
     public CallingScreen(Phone phone, Contact contact) {
         super(phone, new CallingScreenController(phone, contact));
-//        this.contact=contact;
     }
 }

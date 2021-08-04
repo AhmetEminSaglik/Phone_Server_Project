@@ -19,8 +19,7 @@ public abstract class BaseMessage {
         this.messageContact = messageContact;
         this.message = message;
         timeAtThatMoment = new TimeAtThatMoment();
-//        this.baseScreen = baseScreen;
-        this.baseScreen = new ReadMessageScreen(phone, this,messageHistory);
+        this.baseScreen = new ReadMessageScreen(phone, this, messageHistory);
     }
 
     public Phone getPhone() {
@@ -67,8 +66,5 @@ public abstract class BaseMessage {
                 ", messageIsSeen=" + messageIsSeen +
                 '}';
     }
-    //    public void updateMessageCardName(){
-//        phone.getMessageHistory().up
-//    }
 
 }

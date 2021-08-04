@@ -18,7 +18,6 @@ import java.util.List;
 public class SettingTwoPhoneForSendingMessageConnection {
     Phone sendMessagePhone, receiveMessagePhone;
     Contact contact;
-    //    BaseMessage baseMessage;
     FindTheNumberIsExistInServer findTheNumberIsExistInServer;
     String messageText;
 
@@ -36,31 +35,21 @@ public class SettingTwoPhoneForSendingMessageConnection {
         SentMessage sentMessage;
         if (receiveMessagePhone != null) {
 
-            System.out.println(getClass().getName() + "       ===>>>> BURADA SERVERDA OLMAYAN NUMARA GIRINCE HATA ALIYORUM");
             sentMessage = new SentMessage(sendMessagePhone, new IdentifyNumber(sendMessagePhone).identifyNumber(receiveMessagePhone.getNumber()), messageText);
             sentMessage.setMessageSent(true);
 
             sendMessagePhone.getMessage().getSentMessageHistory().addMessage(sentMessage);
             ReceivedMessage receivedMessage = new ReceivedMessage(receiveMessagePhone, new IdentifyNumber(receiveMessagePhone).identifyNumber(sendMessagePhone.getNumber()), messageText);
 
-//            RecordManagement recordManagement = new RecordManagement(receiveMessagePhone.getServer());
-
-
-//            System.out.println("sentMessage.getTimeAtThatMoment()  NULL MU BAKKKK"+sentMessage.getTimeAtThatMoment()) ;
-//            recordManagement.recordMessage(getRecordServerToSaveXML(sendMessagePhone, getReceivedTextPhoneNumber(), messageText, sentMessage.getTimeAtThatMoment()));
-
-            //    saveMessageToXML(sentMessage);
             receiveMessagePhone.getMessage().getReceivedMessageHistory().addMessage(receivedMessage);
             if (receiveMessagePhone.getStage().isShowing())
                 receiveMessagePhone.getMusicPlayer().playMusicTextNotification();
 
         } else {
-            System.out.println(getClass().getName() + "       ===>>>> BURADA SERVERDA OLMAYAN NUMARA GIRINCE HATA ALIYORUM");
             sentMessage = new SentMessage(sendMessagePhone, contact, messageText);
             sendMessagePhone.getMessage().getSentMessageHistory().addMessage(sentMessage);
 
         }
-        System.out.println("MESAJLAR GONDERILDI");
         saveMessageToXML(sentMessage);
 
 
@@ -69,7 +58,6 @@ public class SettingTwoPhoneForSendingMessageConnection {
     void saveMessageToXML(SentMessage sentMessage) {
 
         RecordManagement recordManagement = new RecordManagement(sendMessagePhone.getServer());
-//        System.out.println("sentMessage.getTimeAtThatMoment()  NULL MU BAKKKK"+sentMessage.getTimeAtThatMoment()) ;
         recordManagement.recordMessage(getRecordServerToSaveXML(sendMessagePhone, getReceivedTextPhoneNumber(), messageText, sentMessage.getTimeAtThatMoment()));
 
 
@@ -89,7 +77,7 @@ public class SettingTwoPhoneForSendingMessageConnection {
         recordMessage.setMessage(messageText);
         recordMessage.setPhoneSentMessage(sentMessage.getNumber());
         recordMessage.setPhonerReceivedMessage(phoneNumberReceivedMessage);
-        System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA TIME " + time);
+
         recordMessage.setTimeAtThatMoment(time.getCallTimeInString());
 
 

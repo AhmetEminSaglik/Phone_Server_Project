@@ -5,12 +5,11 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import mynote.MyNote;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class PhoneKeyController implements Initializable { //, INumberArea, IValues, IClickValue
+public class PhoneKeyController implements Initializable {
     String btnText;
     TimeForClickValue timeForClickValue;
     StringValue stringValue;
@@ -25,7 +24,7 @@ public class PhoneKeyController implements Initializable { //, INumberArea, IVal
         stringValue = new StringValue(btnText);
     }
 
-    public String getIntegerValue(){
+    public String getIntegerValue() {
         IntegerFromString integerFromString = new IntegerFromString(PhoneKeyButton.getText());
         return integerFromString.getIntegerInStringVariable();
 

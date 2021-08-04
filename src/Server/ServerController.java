@@ -1,18 +1,6 @@
 package server;
 
-//import archive.Archive;
-
-import javafx.event.EventHandler;
-import javafx.scene.Node;
-import javafx.scene.control.ScrollBar;
-import javafx.scene.control.ScrollToEvent;
-import javafx.scene.control.TextArea;
-import javafx.scene.input.ScrollEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
 import phone.Phone;
-import phone.key.ability.function.Function;
 import phone.screen.registerednumbers.contact.Contact;
 import server.connection.SettingTwoPhoneForCallingConnection;
 import server.connection.SettingTwoPhoneForSendingMessageConnection;
@@ -98,13 +86,11 @@ ServerController implements Initializable {
     RegisteredPhoneCard findRegisteredPhoneCard(String phoneNumber) {
 
         for (int i = 1; i < registeredPhoneNumberVBox.getChildren().size(); i++) {
-            System.out.println("registeredPhoneNumberVBox.getChildren()  " + registeredPhoneNumberVBox.getChildren().get(i).toString());
-            if (((RegisteredPhoneCard) registeredPhoneNumberVBox.getChildren().get(i)).getPhone().getNumber().equals(phoneNumber)) {
+             if (((RegisteredPhoneCard) registeredPhoneNumberVBox.getChildren().get(i)).getPhone().getNumber().equals(phoneNumber)) {
                 return ((RegisteredPhoneCard) registeredPhoneNumberVBox.getChildren().get(i));
             }
         }
-        System.out.println(getClass().getSimpleName() + " findRegisteredPhoneCard --> NULL GIRDI");
-        return null;
+         return null;
     }
 
     public void callNumber(Contact contactWhoIsCallingSomeone, Contact contactWhoWillAnswerCall) { // who is being call --> callingContact / who calls --> comingCallContact

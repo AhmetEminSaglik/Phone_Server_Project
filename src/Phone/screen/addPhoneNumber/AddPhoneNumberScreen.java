@@ -8,7 +8,6 @@ public class AddPhoneNumberScreen extends BaseScreen {
         super(phone);
         this.baseScreenController = new AddPhoneNumberScreenController(phone);
         loadFxmlFile("AddPhoneNumberScreen.fxml");
-
     }
 
 }

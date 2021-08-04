@@ -6,6 +6,7 @@ public class IntegerFromString {
     public IntegerFromString(String text) {
         this.text = text;
     }
+
     public String getIntegerInStringVariable() {
         int integerValue = 0;
         for (int i = 0; i < text.length(); i++) {
@@ -22,7 +23,7 @@ public class IntegerFromString {
             int integerValue = Integer.parseInt(stringValue);
             return integerValue;
         } catch (NumberFormatException e) {
-//            System.out.println(e.getMessage());
+            System.out.println("EXCEPTION : "+e.getMessage());
 
         }
         return -1;

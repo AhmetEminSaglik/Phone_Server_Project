@@ -13,13 +13,5 @@ public abstract  class BaseMessageListViewController extends ListViewScreenContr
     @Override
     public void preparePhoneScreenList() {
 
-//        List<MessageHistoryCard> messageHistoryList = phone.getMessageHistory().getList();
-//        if (messageHistoryList.size() > 0) {
-//            for (int i = messageHistoryList.size() - 1; i >= 0; i--) {
-//                addItemtoMenuList((Card) messageHistoryList.get(i));
-//            }
-//        } else {
-//            addItemtoMenuList(new ContactCard(new Contact(new Person("Has not been got or sent phone.message", null), null), messageHistory));
-//        }
     }
 }

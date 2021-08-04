@@ -19,8 +19,6 @@ public class RegisteredPhoneCardUpdateSituation {
 
     public void phoneClose() {
         paintPhoneSituation(new RegisteredPhoneCardSituationColor(phone).getOffLineColor());
-//        new KeyAbility(phone).changeScreenToMainMenu();
-//        new Function(phone).changeScreen(new MainMenuScreen(phone));s
         new Function(phone).changeScreenToMainScreen();
         updateActivateCloseBtn("Activate Phone", btnActivateFunction());
     }

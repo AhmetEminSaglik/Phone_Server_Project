@@ -11,7 +11,6 @@ public class ComingCallScreenController extends BaseCallScreenController {
         super(phone, contact);
     }
 
-
     @Override
     public void updateScreen() {
         identifyComingCall();
@@ -28,11 +27,5 @@ public class ComingCallScreenController extends BaseCallScreenController {
         }
 
     }
-//
-//    @Override
-//    public void addActionToOperatorKeys() {
-//        super.addActionToOperatorKeys();
-//        System.out.println(getClass().getSimpleName()+"COMING CALL --->>>>>> BURADA ");
-//    }
 }
 

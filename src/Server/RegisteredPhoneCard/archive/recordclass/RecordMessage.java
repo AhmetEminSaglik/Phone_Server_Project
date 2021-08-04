@@ -1,7 +1,5 @@
 package server.registeredphonecard.archive.recordclass;
 
-import date.TimeAtThatMoment;
-import phone.Phone;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -18,8 +16,6 @@ import javax.xml.bind.annotation.XmlType;
 
 public class RecordMessage {
 
-    //    Phone phoneSentMessage;
-//    Phone phonerReceivedMessage;
     String phoneSentMessage;
     String phonerReceivedMessage;
     String message;

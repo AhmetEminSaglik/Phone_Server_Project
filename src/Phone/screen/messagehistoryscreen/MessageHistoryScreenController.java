@@ -15,8 +15,6 @@ public class MessageHistoryScreenController extends ListViewScreenController {
 
     @Override
     public void preparePhoneScreenList() {
-//        addItemtoMenuList(new OptionScreenCard("Send BaseMessage", new (phone)));
-//        addItemtoMenuList(new OptionScreenCard("Send BaseMessage", new MessageScreen(phone, null)));
         addToScreenMessageHistoryOptions();
     }
     @Override
@@ -28,15 +26,6 @@ public class MessageHistoryScreenController extends ListViewScreenController {
         addItemtoMenuList(new OptionScreenCard("Send BaseMessage", new MessageScreen(phone,null)));
         addItemtoMenuList(new OptionScreenCard("Sent Messages",new SentMessageScreen(phone)));
         addItemtoMenuList(new OptionScreenCard("Received Messages",new ReceivedMessageScreen(phone)));
-
-//        List<MessageHistoryCard> messageHistoryList = phone.getMessageHistory().getList();
-//        if (messageHistoryList.size() > 0) {
-//            for (int i = messageHistoryList.size() - 1; i >= 0; i--) {
-//                addItemtoMenuList((Card) messageHistoryList.get(i));
-//            }
-//        } else {
-//            addItemtoMenuList(new ContactCard(new Contact(new Person("Has not been got or sent phone.message", null), null), messageHistory));
-//        }
     }
 
     public void setMessageHistory(MessageHistoryScreen messageHistory) {

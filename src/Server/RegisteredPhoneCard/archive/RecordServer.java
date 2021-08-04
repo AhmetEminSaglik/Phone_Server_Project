@@ -51,16 +51,6 @@ public class RecordServer {
         callList.addAll(list);
     }
 
-    /*  public void unionMessageOperations(List firstList, List secondList) {
-
-          getClass().cast(firstList);
-
-          List<RecordMessage> recordMessageList = new ArrayList<RecordMessage>();
-          recordMessageList.addAll(firstList);
-          recordMessageList.addAll(secondList);
-          setRecordMessagesList(recordMessageList);
-
-      }*/
     public RecordServer getRecordServerByUnmarshalFile(Unmarshaller unmarshaller, String fileName) {
         RecordServer recordServer = null;
         try {
@@ -72,18 +62,8 @@ public class RecordServer {
         return recordServer;
     }
 
-
     public RecordServer getRecordServerAllObjectsByConvertingXMLToJavaObjectClass(Unmarshaller unmarshaller, String fileName) {
         return getRecordServerByUnmarshalFile(unmarshaller, fileName);
     }
 
-    public void printRecordServerMessageList() {
-        if (messageList.size() > 0) {
-            for (RecordMessage temmp : messageList) {
-                System.out.println("ELIMIZDEKI RECORDSERVER :" + temmp.getMessage());
-            }
-        } else {
-            System.out.println("OKUNAN DOSYADAKI MESSAGE YOK");
-        }
-    }
 }

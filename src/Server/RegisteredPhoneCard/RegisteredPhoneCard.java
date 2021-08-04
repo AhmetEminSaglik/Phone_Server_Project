@@ -24,7 +24,7 @@ public class RegisteredPhoneCard extends AnchorPane {
             this.registeredPhoneCardController = fxmlLoader.getController();
 
         } catch (IOException exception) {
-            System.out.println("HATAAA ::: >>> " + exception.getMessage());
+            System.out.println("Exception : " + exception.getMessage());
             throw new RuntimeException(exception.getMessage());
         }
     }

@@ -30,7 +30,6 @@ public class SentMessageScreenController extends BaseMessageListViewController {
                 addItemtoMenuList((Card) sentMessageList.get(i));
             }
         } else {
-//            addItemtoMenuList(new ContactCard(new Contact(new Person("Has not been got or sent phone.message", null), null), messageHistory) );
             addItemtoMenuList(new EmptyCard("Sent BaseMessage history is empty", sentMessageScreen));
         }
     }

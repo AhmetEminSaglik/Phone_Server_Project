@@ -1,6 +1,7 @@
 package phone.screen.registerednumbers.contact;
 
 public class Person {
+
     String name, surname;
     public final static String unKnownPerson = "Unknown Person";
 
@@ -9,7 +10,6 @@ public class Person {
         if (surname != null) {
             this.surname = surname.trim();
         }
-
     }
 
     public String getName() {

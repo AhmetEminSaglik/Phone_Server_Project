@@ -5,7 +5,6 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Label;
-import mynote.MyNote;
 import phone.Phone;
 import phone.screen.callingscreen.BaseCallScreenController;
 import phone.utility.IdentifyNumber;
@@ -26,7 +25,7 @@ import server.registeredphonecard.situation.RegisteredPhoneCardUpdateSituation;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SettingTwoPhoneForCallingConnection { //ConnectionTwoPhone
+public class SettingTwoPhoneForCallingConnection {
     RecordCall recordCall = new RecordCall();
 
     Server server;
@@ -42,7 +41,6 @@ public class SettingTwoPhoneForCallingConnection { //ConnectionTwoPhone
     final boolean dialedBolleanVal = false;
     StopWatch stopWatch;
     boolean callIsAnswered = false;
-    //    MusicPlayer musicPlayer;
     TimeAtThatMoment timeAtThatMoment;
     String communicationTime = "NULL";
 
@@ -61,47 +59,27 @@ public class SettingTwoPhoneForCallingConnection { //ConnectionTwoPhone
 
         timeAtThatMoment = new TimeAtThatMoment();
 
-//        callerPhone.getCallHistory().addCall(callerPhone,dialedPhone.getNumber(),true,callIsAnswered);
-
         switch (dialedPhone.getSituation()) {
             case PhoneSituation._CLOSED:
                 dialedPhoneIsClosed(callerPhone);
-                //prepareRecordCall(callerPhone, dialedPhone, callIsAnswered, timeAtThatMoment.getCallTimeInString(), stopWatch.getTimeString());
-                //ll(Phone caller, Phone dialed, boolean connected, String callTime, String communicationTime)
 
-//                saveXMLFile();
                 break;
             case PhoneSituation._AVAILABLE:
-
-                MyNote.showinOutPut(getClass(),
-                        "Burada telefon kapatildigi anda olan islemleri  burada eklemek yerine telefon setOnClose -->\n" +
-                                "bir class acip\n" +
-                                "liste olusturup\n" +
-                                "liste icine event yukleyip\n" +
-                                "sonrasinda bu eventi telefon kapatma ya da serverdaki telefon kapatma olayina ekleme \n" +
-                                "boylece telefon kapattigimizda olan islemler ayni zamanda servendan telefonu kapattigimiz zamanda olacak\n" +
-                                "!!! ===>>>  phone.SetOnClosRequest burada arama esnasinda degistirildigi icin bunu tekrardan duzeltmek gerekiyor. \n" +
-                                "Bunu da ActionEvent Classi olusturuldugu vakit duzelticem");
                 signalLost(callerRegisteredPhoneCard);
                 signalLost(dialedRegisteredPhoneCard);
                 connectionIsPossible(callerPhone, dialedPhone);
                 waitToGetAnswerFromDialedPhone();
-//                break;
-//                addLastRecordsInXMLFile();
                 return;
             case PhoneSituation.
                     _BUSY:
 
                 dialedPhoneIsBusy(callerPhone);
-                //      prepareRecordCall(callerPhone, dialedPhone, callIsAnswered, timeAtThatMoment.getCallTimeInString(), stopWatch.getTimeString());
-//                endCall();
                 break;
 
         }
 
         saveRecordForCallerPhone();
-//        addCallHistory(callerPhone, dialedPhone.getNumber(), callBolleanVal, callIsAnswered);
-//        addLastRecordsInXMLFile();
+
     }
 
     void connectionIsPossible(Phone callerPhone, Phone dialedPhone) {
@@ -128,8 +106,6 @@ public class SettingTwoPhoneForCallingConnection { //ConnectionTwoPhone
 
     void playMusic(Phone dialedPhone) {
         dialedPhone.getMusicPlayer().playMusicRingTone();
-//        musicPlayer = new MusicPlayer();
-//        musicPlayer.playMusic(new MusicPath().getNokiaRingTone());
     }
 
     void stopMusic(Phone phone) {
@@ -154,7 +130,6 @@ public class SettingTwoPhoneForCallingConnection { //ConnectionTwoPhone
 
     void activateDialedPhoneKeyToHangUpCall(Phone phone) {
         new PhoneKeyWanted(phone).getPhoneKey(1, 2).setOnAction(hangUpEvent("The Number Is busy"));
-        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
     }
 
     void waitToGetAnswerFromDialedPhone() {
@@ -196,7 +171,6 @@ public class SettingTwoPhoneForCallingConnection { //ConnectionTwoPhone
     }
 
     void endCall() {
-        System.out.println("ARAMA BITTIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
         stopMusic(dialedPhone);
         isConnectionWaitingTimeOver = true;
         prepareRecordCall(callerPhone, dialedPhone, callIsAnswered, timeAtThatMoment.getCallTimeInString(), getStopWatchTime()); //"00:00:00"  stopWatch.getTimeString()
@@ -216,25 +190,14 @@ public class SettingTwoPhoneForCallingConnection { //ConnectionTwoPhone
 
         new Function(callerPhone).activateKeyByLastScreenController(callerPhone);
         new Function(dialedPhone).changeScreenToLastScreen();
-//        callerPhone.
-//        new RegisteredPhoneCardUpdateSituation(callerRegisteredPhoneCard).phoneClose();
-//        new RegisteredPhoneCardUpdateSituation(dialedRegisteredPhoneCard).phoneClose();
 
         addCloseRequestAfterEndedCall(callerRegisteredPhoneCard);
         addCloseRequestAfterEndedCall(dialedRegisteredPhoneCard);
 
-//        callerRegisteredPhoneCard.getPhone().getStage().setOnCloseRequest(e -> {
-//            new RegisteredPhoneCardUpdateSituation(callerRegisteredPhoneCard).phoneClose();
-//
-//        });
-//        dialedRegisteredPhoneCard.getPhone().getStage().setOnCloseRequest(e -> {
-//            new RegisteredPhoneCardUpdateSituation(dialedRegisteredPhoneCard).phoneClose();
-//
-//        });
 
         saveRecordForCallerPhone(); //addCallHistory(callerPhone, dialedPhone.getNumber(), callBolleanVal, callIsAnswered);
         saveRecordForDialedPhone(); //addCallHistory(dialedPhone, callerPhone.getNumber(), dialedBolleanVal, callIsAnswered);
-//        addLastRecordsInXMLFile();
+
     }
 
     void saveRecordForCallerPhone() {
@@ -250,24 +213,10 @@ public class SettingTwoPhoneForCallingConnection { //ConnectionTwoPhone
     }
 
     void addCallHistory(Phone phone, String contactNumber, boolean callSomeone, boolean answered) {
-//        System.out.println("CONTACT : "+new IdentifyNumber(phone).identifyNumber(contactNumber));
-//        Contact contact = new IdentifyNumber(phone).identifyNumber(contactNumber);
-//        if (contact == null) {
-//            contact = new Contact(null, contactNumber);
-//        }
-
-        System.out.println(" BIR KERE EKLENMIS OMASI LAZIMMMM ::::::::::::::::::::::::::::::::::::::::  saveXMLFile(); saveXMLFile();");
-
         if (stopWatch != null) {
             communicationTime = stopWatch.getTimeString();
-            System.out.println("COMMUNUCAITON TYIME :" + communicationTime);
-        } else {
-            System.out.println("STOPWATH = NULLLLL");
         }
         phone.getCallHistory().addCall(new IdentifyNumber(phone).identifyNumber(contactNumber), callSomeone, answered, timeAtThatMoment, communicationTime);
-
-
-//public void addCall(Contact contact, boolean callSomeone,  boolean answered,TimeAtThatMoment timeAtThatMoment, String communicationTime) {
 
     }
 
@@ -293,8 +242,6 @@ public class SettingTwoPhoneForCallingConnection { //ConnectionTwoPhone
 
     void dialedPhoneIsAvailable(Phone callerPhone) {
         setTextSituationPhone(callerPhone, "Is Calling");
-//        System.out.println("IS CALLING YAZIYOR MU");
-//        System.out.println("USTTEKI YAZIYOR MU ?");
     }
 
     void signalLost(RegisteredPhoneCard registeredPhoneCard) {
@@ -304,7 +251,6 @@ public class SettingTwoPhoneForCallingConnection { //ConnectionTwoPhone
             setTextSituationPhone(callerPhone, "signal is lost");
             setTextSituationPhone(dialedPhone, "signal is lost");
             endCall();
-            System.out.println("  <<<< End Call function seems like  unnecessery>>");
             new RegisteredPhoneCardUpdateSituation(registeredPhoneCard).phoneClose();
         });
 
@@ -317,7 +263,7 @@ public class SettingTwoPhoneForCallingConnection { //ConnectionTwoPhone
                 lblSituation.setText(text);
             }
         } catch (ClassCastException ex) {
-            System.out.println("------------------------------------->>>> HATA " + ex.getMessage());
+            System.out.println("------------------------------------->>>> EXCEPTION " + ex.getMessage());
         }
 
     }
@@ -349,7 +295,6 @@ public class SettingTwoPhoneForCallingConnection { //ConnectionTwoPhone
             public void handle(ActionEvent actionEvent) {
                 stopMusic(dialedPhone);
                 callIsAnswered = true;
-                System.out.println("ARAMA CEVAPLANDI TRU OLDU " + callIsAnswered);
                 setTextSituationPhone(callerPhone, txtInfoConnectionIsSuccesfull);
                 setTextSituationPhone(dialedPhone, txtInfoConnectionIsSuccesfull);
                 startPhoneCallSession();
@@ -392,30 +337,5 @@ public class SettingTwoPhoneForCallingConnection { //ConnectionTwoPhone
         list.add(recordCall);
         return list;
 
-
     }
-//
-//    RecordServer getRecordServerToSaveXML(Phone sentMessage, String phoneNumberReceivedMessage, String messageText, TimeAtThatMoment time) {
-//        RecordServer recordServer = new RecordServer();
-//        recordServer.addListMessageOpearations(prepareRecordCall(sentMessage, phoneNumberReceivedMessage, messageText, time));
-//
-//        return recordServer;
-//
-//    }
-
-
-
-    /*
-    *         RecordManagement recordManagement = new RecordManagement(sendMessagePhone.getServer());
-//        System.out.println("sentMessage.getTimeAtThatMoment()  NULL MU BAKKKK"+sentMessage.getTimeAtThatMoment()) ;
-        recordManagement.recordMessage(getRecordServerToSaveXML(sendMessagePhone, getReceivedTextPhoneNumber(), messageText, sentMessage.getTimeAtThatMoment()));
-
-* */
-//
-//    void addLastRecordsInXMLFile() {
-//        System.out.println("GELINDIIIIIIIIIIIIIIIIIII");
-//        server.getArchive().getCallXMLFile().writeXMLFile(callerPhone, dialedPhone, "Call", callIsAnswered, timeAtThatMoment,communicationTime);
-//
-//
-//    }
 }

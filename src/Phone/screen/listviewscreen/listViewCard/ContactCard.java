@@ -30,13 +30,9 @@ public class ContactCard extends Card {
     @Override
     public String toString() {
         if (contact != null) {
-            System.out.println(" Contact toString()  -- >>>>    BAKKK");
             return contact.toString();
         } else {
-            System.out.println(getClass().getName() + " ---> Contact is NULL ");
-            return "";
+             return "";
         }
-        //        return contact.getPerson().toString();
-
     }
 }

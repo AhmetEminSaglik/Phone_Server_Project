@@ -22,8 +22,6 @@ public class Phone extends Application {
     private ScreenStack screenStack = new ScreenStack();
     private int situation = -1;
     private CallHistory callHistory = new CallHistory(this);
-    //   private MessageHistory messageHistory= new MessageHistory(this);
-    //    private List registeredContactList = new ArrayList<ContactCard>();
     private Message message = new Message(this);
     private RegisteredContact registeredContact = new RegisteredContact(this);
 
@@ -35,15 +33,6 @@ public class Phone extends Application {
     public void start(Stage primaryStage) {
         Parent root = null;
         try {
-//
-//            for (int i = 0; i < 10; i++) {
-//                registeredContact.add(new Contact(new Person(i+"", ""), i+""));
-//            }
-
-//                               (new ContactCard(contact,
-//                    new ContactPersonScreen(this,contact)));
-
-
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Phone.fxml")); //
             fxmlLoader.setController(phoneController);
             root = fxmlLoader.load(); //root = FXMLLoader.load(getClass().getResource("Phone.fxml"));
@@ -57,7 +46,7 @@ public class Phone extends Application {
             primaryStage.show();
 
         } catch (IOException e) {
-            System.out.println(" HHATA :" + e.getMessage());
+            System.out.println("Exception :" + e.getMessage());
             e.printStackTrace();
 
             System.exit(0);
@@ -151,12 +140,4 @@ public class Phone extends Application {
                 "number='" + number + '\'' +
                 '}';
     }
-    //
-//    public MessageHistory getMessageHistory() {
-//        return messageHistory;
-//    }
-//
-//    public void setMessageHistory(MessageHistory messageHistory) {
-//        this.messageHistory = messageHistory;
-//    }
 }

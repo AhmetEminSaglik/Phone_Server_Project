@@ -7,7 +7,7 @@ import server.findnumber.FindTheNumberIsExistInServer;
 
 public class SendingMessage {
     Server server;
-    Phone phoneSendMessage;//, phoneReceiveMessage;
+    Phone phoneSendMessage;
     Contact contactReceiveMessage;
     FindTheNumberIsExistInServer findTheNumberIsExistInServer;
 
@@ -17,10 +17,6 @@ public class SendingMessage {
         this.contactReceiveMessage = contactReceiveMessage;
 
     }
-
-//    public Phone searcNumberInServer(Contact contact) {
-//        return findTheNumberIsExistInServer.searcNumber(contact);
-//    }
 
     public void sendMessage(String message) {
         server.getServerController().sendMessageToNumber(phoneSendMessage, contactReceiveMessage, message);

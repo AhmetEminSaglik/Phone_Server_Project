@@ -21,7 +21,7 @@ public class KeyAbility<T> {
     T list;
     BaseScreenController baseScreenController;
 
-    public KeyAbility(Phone phone, T list) { //, BaseScreenController baseScreenController
+    public KeyAbility(Phone phone, T list) {
         this.phone = phone;
         this.list = list;
     }
@@ -36,7 +36,6 @@ public class KeyAbility<T> {
             @Override
             public void handle(ActionEvent actionEvent) {
                 new Function(phone).scrollUpTextArea(textArea);
-
             }
         };
     }
@@ -51,23 +50,17 @@ public class KeyAbility<T> {
     }
 
 
-    public EventHandler<ActionEvent> changeScreen(BaseScreen newScreen,BaseScreen oldBaseScreenNewInitialize) { //Phone phone, ListView listView updateScreenAccordingToSelectedListViewItemScreen
+    public EventHandler<ActionEvent> changeScreen(BaseScreen newScreen, BaseScreen oldBaseScreenNewInitialize) {
         return new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 if (newScreen != null)
-                    new Function(phone).changeScreen(newScreen,oldBaseScreenNewInitialize);
-                else {
-
-                    System.out.println("EventHandler<ActionEvent>  changeScreen ELSE TIKLANDII screen : NULLLL  ");
-                }
+                    new Function(phone).changeScreen(newScreen, oldBaseScreenNewInitialize);
             }
-
-
         };
     }
 
-    public EventHandler<ActionEvent> changeScreenToLastScreen() { //Phone phone, ListView listView updateScreenAccordingToSelectedListViewItemScreen
+    public EventHandler<ActionEvent> changeScreenToLastScreen() {
         return new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -76,26 +69,14 @@ public class KeyAbility<T> {
         };
     }
 
-    public EventHandler<ActionEvent> changeScreenToMainMenu() { //Phone phone, ListView listView updateScreenAccordingToSelectedListViewItemScreen
+    public EventHandler<ActionEvent> changeScreenToMainMenu() {
         return new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-//                new Function(phone).changeScreenToMainMenu(new MainMenuScreen(phone));
-//                new Function(phone).changeScreen(new MainMenuScreen(phone));s
                 new Function(phone).changeScreenToMainScreen();
-//                phone.getScreenStack().clearScreenStack();
             }
         };
     }
-
-//    public EventHandler<ActionEvent> updateScreenController(BaseScreenController baseScreenController) {
-//        return new EventHandler<ActionEvent>() {
-//            @Override
-//            public void handle(ActionEvent actionEvent) {
-//                new Function(phone).updateScreenController(baseScreenController);
-//            }
-//        };
-//    }
 
     public EventHandler<ActionEvent> printStringValueToTextInputControl(TextInputControl textInputControl, PhoneKey button) {
         return new EventHandler<ActionEvent>() {
@@ -104,7 +85,9 @@ public class KeyAbility<T> {
                 new Function(phone).printStringValueToTextInputControl(textInputControl, button);
             }
         };
-    } public EventHandler<ActionEvent> printIntegerValueToTextInputControl(TextInputControl textInputControl, PhoneKey button) {
+    }
+
+    public EventHandler<ActionEvent> printIntegerValueToTextInputControl(TextInputControl textInputControl, PhoneKey button) {
         return new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -113,7 +96,7 @@ public class KeyAbility<T> {
         };
     }
 
-    public EventHandler<ActionEvent> callPhoneNumber(Contact contact) { //Phone phone, ListView listView updateScreenAccordingToSelectedListViewItemScreen
+    public EventHandler<ActionEvent> callPhoneNumber(Contact contact) {
         return new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -122,38 +105,15 @@ public class KeyAbility<T> {
         };
     }
 
-    public EventHandler<ActionEvent> sendMessage(MessageScreenController messageScreenController) { //List<Contact> contactList, String message//Phone phone, ListView listView updateScreenAccordingToSelectedListViewItemScreen
+    public EventHandler<ActionEvent> sendMessage(MessageScreenController messageScreenController) {
         return new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 messageScreenController.getLastUpdationBeforeSendingMessage();
-
                 new Function(phone).sendMessageToEveryOneInContactlist(messageScreenController.getContactListToSendMessage(), messageScreenController.getMessage());
-//                for (int i = 0; i < contactList.size(); i++) {
-//                    new Function(phone).sendMessage(contactList.get(i), message);
-//                }
             }
         };
     }
 
-//    public EventHandler<ActionEvent> hangUpCall() { //Phone phone, ListView listView updateScreenAccordingToSelectedListViewItemScreen
-//        return new EventHandler<ActionEvent>() {
-//            @Override
-//            public void handle(ActionEvent actionEvent) {
-//                BaseCallScreen baseCallScreen = (BaseCallScreen) phone.getPhoneController().getScreenAnchorPane().getChildren().get(0);
-//
-//            }
-//        };
-//    }
-
-//    public EventHandler<ActionEvent> pickUpCall() { //Phone phone, ListView listView updateScreenAccordingToSelectedListViewItemScreen
-//        return new EventHandler<ActionEvent>() {
-//            @Override
-//            public void handle(ActionEvent actionEvent) {
-//                BaseCallScreen baseCallScreen = (BaseCallScreen) phone.getPhoneController().getScreenAnchorPane().getChildren().get(0);
-//
-//            }
-//        };
-//    }
 
 }

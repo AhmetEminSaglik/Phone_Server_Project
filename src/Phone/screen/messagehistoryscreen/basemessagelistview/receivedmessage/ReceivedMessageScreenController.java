@@ -11,7 +11,8 @@ import phone.screen.messagehistoryscreen.basemessagelistview.BaseMessageListView
 
 import java.util.List;
 
-public class ReceivedMessageScreenController extends BaseMessageListViewController {
+public class
+ReceivedMessageScreenController extends BaseMessageListViewController {
     ReceivedMessageScreen receivedMessageScreen;
 
     public ReceivedMessageScreenController(Phone phone) {
@@ -31,7 +32,6 @@ public class ReceivedMessageScreenController extends BaseMessageListViewControll
                 addItemtoMenuList((Card) receivedMessageList.get(i));
             }
         } else {
-//            addItemtoMenuList(new ContactCard(new Contact(new Person("Has not been got or sent phone.message", null), null), messageHistory) );
             addItemtoMenuList(new EmptyCard("Received BaseMessage history is empty", receivedMessageScreen));
         }
 

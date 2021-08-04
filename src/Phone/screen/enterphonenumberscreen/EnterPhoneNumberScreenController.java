@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class EnterPhoneNumberScreenController extends BaseScreenController { //implements Initializable
+public class EnterPhoneNumberScreenController extends BaseScreenController {
 
     @FXML
     private TextField txtWillBeEnteredPhoneNumber;
@@ -29,15 +29,10 @@ public class EnterPhoneNumberScreenController extends BaseScreenController { //i
 
     @Override
     public void addActionToOperatorKeys() {
-
-//        System.out.println("PHONE : " + phone);
         numberKeyEvent.setEventToCallNumberByPhoneNumber(getWantedPhoneKey(phone, 0, 0), txtWillBeEnteredPhoneNumber.getText());
-//        numberKeyEvent.setEventToCallNumber(getWantedPhoneKey(phone, 0, 0), txtWillBeEnteredPhoneNumber.getText());
-        numberKeyEvent.setEventToDeleteLastLetter(getWantedPhoneKey(phone,0,2),txtWillBeEnteredPhoneNumber);
+        numberKeyEvent.setEventToDeleteLastLetter(getWantedPhoneKey(phone, 0, 2), txtWillBeEnteredPhoneNumber);
         numberKeyEvent.setEventToCallNumberByPhoneNumber(getWantedPhoneKey(phone, 1, 0), txtWillBeEnteredPhoneNumber.getText());
         numberKeyEvent.setEventToChangeScreenToMainMenuScreen(getWantedPhoneKey(phone, 1, 2));
-
-//        MyNote.showMessageDialog("ABC fxml file yuklenirken oncesinde de controller calisiyor, Eger bir ABC fxml file cagirirsam icinde de tekrar ABC fxml file olunca sonsuz donguye giriyor.");
     }
 
     @Override

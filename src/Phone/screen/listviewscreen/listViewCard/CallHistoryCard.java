@@ -12,15 +12,15 @@ public class CallHistoryCard extends Card {
     TimeAtThatMoment timeAtThatMoment;
     String communicationTime;
 
-    public CallHistoryCard(Contact contact, String callExpression, String answeredExpression, TimeAtThatMoment timeAtThatMoment, String communicationTime) {//, BaseScreen baseScreen
-        this(contact.getLimitedNameChracter(1,5 ) + " " + callExpression + " " + answeredExpression + timeAtThatMoment.getCallTimeInString(),null);
+    public CallHistoryCard(Contact contact, String callExpression, String answeredExpression, TimeAtThatMoment timeAtThatMoment, String communicationTime) {
+        this(contact.getLimitedNameChracter(1, 5) + " " + callExpression + " " + answeredExpression + timeAtThatMoment.getCallTimeInString(), null);
 
         this.contact = contact;
         this.baseScreen = baseScreen;
         this.callExpression = callExpression;
         this.answeredExpression = answeredExpression;
         this.timeAtThatMoment = timeAtThatMoment;
-        this.communicationTime=communicationTime;
+        this.communicationTime = communicationTime;
     }
 
     public CallHistoryCard(String name, BaseScreen phoneScreen) {

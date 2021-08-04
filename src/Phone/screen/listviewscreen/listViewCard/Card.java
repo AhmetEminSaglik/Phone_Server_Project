@@ -12,23 +12,6 @@ public abstract class Card {
         this.phoneScreen = phoneScreen;
     }
 
-//    public String limitTheNameWillBeShown(int totalCharNumberToShow) {
-//        return getLimitedName(totalCharNumberToShow);
-//    }
-//
-//    public String limitTheNameWillBeShown() {
-//        return getLimitedName(totalCharNumberToShow);
-//    }
-//
-//    String getLimitedName(int totalCharNumberToShow) {
-//        String text = "";
-//        for (int i = 0; i < totalCharNumberToShow; i++) {
-//            text += name.charAt(i);
-//        }
-//        text += "...";
-//        return text;
-//    }
-
     public String getName() {
         return name;
     }

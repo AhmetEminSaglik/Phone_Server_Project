@@ -20,21 +20,11 @@ public class RecordManagement {
     }
 
     public void recordMessage(RecordServer recordServer) {
-
-
         appendToFile(recordServer, new RecordMessageManagement());
-//        XMLFileOperation xmlFileOperation = new XMLFileOperation(server);
-//        xmlFileOperation.appendFile(recordServer.getClass(), recordServer, getFileName(), interfaceDeneme);
-
     }
 
     public void recordCall(RecordServer recordServer) {
-
-
         appendToFile(recordServer, new RecordCallManagement());
-//        XMLFileOperation xmlFileOperation = new XMLFileOperation(server);
-//        xmlFileOperation.appendFile(recordServer.getClass(), recordServer, getFileName(), interfaceDeneme);
-
     }
 
     void appendToFile(RecordServer recordServer, IRecord iRecord) {

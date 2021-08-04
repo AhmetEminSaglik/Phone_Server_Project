@@ -11,6 +11,4 @@ public class StringValue {
         return text.charAt(clickValue) + "";
     }
 
-
-
 }

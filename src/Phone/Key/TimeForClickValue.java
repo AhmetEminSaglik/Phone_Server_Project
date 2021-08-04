@@ -11,7 +11,7 @@ public class TimeForClickValue {
 
     private int interval;
     Timer timer;
-    final int waitingSecond =2;
+    final int waitingSecond = 2;
     int clickValue = 0;
     final int delay = 1000;
     final int period = 1000;
@@ -26,7 +26,6 @@ public class TimeForClickValue {
     public void startCountDownForClickedNumberPhonKey(Button PhoneKeyButton) {
         if (isSameButtonClicked(PhoneKeyButton) && interval > 0) {
             resetInterval();
-//            new Function(phone).deleteLastLetter();
             canBeAddNewCharacter = false;
 
         } else {
@@ -35,8 +34,6 @@ public class TimeForClickValue {
             startTheCountdown(PhoneKeyButton);
             canBeAddNewCharacter = true;
         }
-
-
     }
 
     public void startTheCountdown(Button PhoneKeyButton) {
@@ -45,8 +42,7 @@ public class TimeForClickValue {
             timer.scheduleAtFixedRate(new TimerTask() {
 
                 public void run() {
-                    System.out.println(setInterval());
-                    System.out.println("Interval : " + interval);
+                    setInterval();
                 }
             }, delay, period);
         } catch (NullPointerException ex) {

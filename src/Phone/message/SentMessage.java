@@ -11,7 +11,6 @@ public class SentMessage extends BaseMessage {
         updateMessageSeen(true);
     }
 
-
     public boolean isMessageSent() {
         return messageSent;
     }

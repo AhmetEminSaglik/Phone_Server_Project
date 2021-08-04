@@ -5,7 +5,7 @@ import phone.screen.registerednumbers.contact.Contact;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RegisteredContact {// extends RegisteredList<Contact>
+public class RegisteredContact {
     Phone phone;
     List list = new ArrayList<Contact>();
 
@@ -32,12 +32,7 @@ public class RegisteredContact {// extends RegisteredList<Contact>
 
     public Contact getContactByPhoneNumber(String phoneNumber) {
         for (int i = 0; i < list.size(); i++) {
-            System.out.println("TANIMLI NUMARALAR " +list.get(i));
             if (((Contact) list.get(i)).getPhoneNumber().equals(phoneNumber)) {
-                System.out.println("TANIMLI NUMARALAR >>>>>>>>>>>>>>" +list.get(i));
-                System.out.println(" RETURN ::: " + ((Contact) list.get(i)));
-//                System.out.println("Coming nuber : " + phoneNumber);
-//                System.out.println("bulunan contact : " + ((Contact) list.get(i)));
                 return ((Contact) list.get(i));
             }
 

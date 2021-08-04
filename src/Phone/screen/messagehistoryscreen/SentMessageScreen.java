@@ -9,13 +9,5 @@ public class SentMessageScreen extends BaseMessageListView {
         super(phone, new SentMessageScreenController(phone));
         ((SentMessageScreenController) baseScreenController).setSentMessageScreen(this);
 
-//        System.out.println("gonderilen  mesaj boyutu : " + phone.getMessage().getSentMessageHistory().size());
-//        phone.getMessage().getSentMessageHistory().getList().forEach(t -> {
-//            System.out.println("Gonderilen mesajlar " + t);
-//        });
-//        System.out.println("Alinan mesaj boyutu : " + phone.getMessage().getReceivedMessageHistory().size());
-//        phone.getMessage().getReceivedMessageHistory().getList().forEach(t -> {
-//            System.out.println("Alinan mesajlar " + t);
-//        });
     }
 }

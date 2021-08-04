@@ -8,8 +8,7 @@ public class ReceivedMessage extends BaseMessage {
     boolean messageRead = false;
 
     public ReceivedMessage(Phone phone, Contact messageContact, String message) {
-        super(phone, messageContact, message,phone.getMessage().getReceivedMessageHistory()) ; //new ReceivedMessageHistory(phone)
-
+        super(phone, messageContact, message, phone.getMessage().getReceivedMessageHistory()); //new ReceivedMessageHistory(phone)
     }
 
     public String getUnReadExpressionIfMessageWasNotRead() {
@@ -17,7 +16,6 @@ public class ReceivedMessage extends BaseMessage {
         if (messageRead == false) {
             text = "(Unread)";
         }
-        System.out.println("DONECEK TEXT ++++++++++++++++++++++++++++++++++++ " + text);
         return text;
     }
 

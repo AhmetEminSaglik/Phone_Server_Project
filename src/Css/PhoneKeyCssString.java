@@ -1,6 +1,7 @@
 package css;
 
-public class PhoneKeyCssString {
+public class
+PhoneKeyCssString {
     public String getBigSize() {
         return "btnBigSize";
     }

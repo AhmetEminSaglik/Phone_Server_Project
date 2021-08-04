@@ -29,8 +29,6 @@ public class PhoneController implements Initializable {
 
     private TimeForClickValue timeForClickValue;
     private PhoneKeyList phoneKeyList = new PhoneKeyList();
-    //    private List<BaseScreen> screenList = new ArrayList<>();
-
 
     public PhoneController(Phone phone, TimeForClickValue timeForClickValue) {
         this.phone = phone;
@@ -39,7 +37,6 @@ public class PhoneController implements Initializable {
 
     @FXML
     private AnchorPane screenAnchorPane;
-
 
     @FXML
     private VBox phoneVBoxLayer;
@@ -51,14 +48,10 @@ public class PhoneController implements Initializable {
     }
 
     public BaseScreen getScreen() {
-//        System.out.println("((BaseScreen) screenAnchorPane.getChildren().get(0))  ???????????? "+((BaseScreen) screenAnchorPane.getChildren().get(0)));
-//        System.out.println(" --> SIZE "+(screenAnchorPane.getChildren().size()));
         return ((BaseScreen) screenAnchorPane.getChildren().get(0));
     }
 
     public BaseScreenController getScreenController() {
-//        System.out.println("((BaseScreen) screenAnchorPane.getChildren().get(0))  ???????????? "+((BaseScreen) screenAnchorPane.getChildren().get(0)));
-//        System.out.println(" --> SIZE "+(screenAnchorPane.getChildren().size()));
         return getScreen().getController();
     }
 
@@ -67,39 +60,13 @@ public class PhoneController implements Initializable {
         screenAnchorPane.getChildren().add(phoneScreen);
 
         BaseScreen firstScreen = getScreen();
-
         firstScreen.getController().updateAllPhone();
         phone.getScreenStack().addCurrentScreenToStack(firstScreen);
-//        Activation.activateController(phone, firstScreen);
-
-
-//        BaseScreen baseScreen = ((BaseScreen) screenAnchorPane.getChildren().get(0));
-//        baseScreen.getController().updateAllPhone();
-//        addCurrentScreenToList(baseScreen);
-
-//        System.out.println("PHONE CONTROLLER ((BaseScreen)phone.getPhoneController().getScreenAnchorPane().getChildren().get(0)) :"
-//                + (
-//                phone.
-//                        getPhoneController().
-//                        getScreenAnchorPane()
-//                        .getChildren().size()));
     }
 
-    //    void addScreen(ComingCallScreen comingCallScreen) {
-//        BaseScreen phoneScreen = new MainMenuScreen(phone);
-//        screenAnchorPane.getChildren().add(phoneScreen);
-//
-//        BaseScreen firstScreen = ((BaseScreen) screenAnchorPane.getChildren().get(0));
-//
-//        firstScreen.getController().updateAllPhone();
-//        phone.getScreenStack().addCurrentScreenToStack(firstScreen);
-//    }
     public void beingCalledByThisContact(Contact contact) {
         BaseScreen comingCallScreen = new ComingCallScreen(phone, contact);
         new Function(phone).changeScreen(comingCallScreen, null);
-//        BaseScreen comingCallScreen= new ComingCallScreen(phone, contact);
-//        screenAnchorPane.getChildren().add(comingCallScreen);
-//        comingCallScreen.getController().updateAllPhone();
 
     }
 
@@ -174,7 +141,6 @@ public class PhoneController implements Initializable {
         PhoneKey phoneKey = new PhoneKey(text, new PhoneKeyController(), timeForClickValue);
         phoneKey.setId(keyId + "Key");
         phoneKey.setCursor(Cursor.HAND);
-//        System.out.println("PHONE KEY ::: "+phoneKey.getId());
 
         return phoneKey;
     }
@@ -186,10 +152,6 @@ public class PhoneController implements Initializable {
                 phoneKey.getStyleClass().add(item);
             }
         }
-//        else {
-//            System.out.println("css bos geldi ama sorun yok");
-//        }
-//        phoneKey.get1StyleClass().addAll("btnCallOpen", "btnBigSize");
         addKey(phoneKey, floor);
 
     }
@@ -197,8 +159,6 @@ public class PhoneController implements Initializable {
     void addKey(PhoneKey phoneKey, HBox floor) {
         addCssToPhoneKey(phoneKey);
         floor.getChildren().add(phoneKey);
-
-//        addKeysToFloor(list, floor);
     }
 
     void addCssToPhoneKey(PhoneKey phoneKey) {
@@ -213,35 +173,14 @@ public class PhoneController implements Initializable {
         hBox.setPrefWidth(screenAnchorPane.getPrefWidth());
         hBox.setAlignment(Pos.CENTER);
         addFloorToPhoneLayer(hBox);
-//        System.out.println("OLUSTUU " +
-//                "");
-//        for (int i = 0; i < hBox.getChildren().size(); i++)
-//        {
-//            System.out.println(hBox.getChildren().toString());
-//
-//        }
+
         return hBox;
-
     }
-
 
     void addFloorToPhoneLayer(HBox floor) {
         phoneVBoxLayer.getChildren().add(floor);
 
     }
-
-//    public List<BaseScreen> getScreenList() {
-//        return screenList;
-//    }
-//
-//    public void setScreenList(List<BaseScreen> screenList) {
-//        this.screenList = screenList;
-//    }
-//
-//    public void addCurrentScreenToList(BaseScreen baseScreen) {
-//        screenList.add(baseScreen);
-//    }
-
 
     public Phone getPhone() {
         return phone;

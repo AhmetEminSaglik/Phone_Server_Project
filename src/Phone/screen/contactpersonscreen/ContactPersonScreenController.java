@@ -20,8 +20,9 @@ public class ContactPersonScreenController extends ListViewScreenController {
     @Override
     public void setSwitchScreenParamaters() {
         numberKeyEvent.setEventToSwitchScreen(getWantedPhoneKey(phone, 0, 0),
-                menuListView.getSelectionModel().getSelectedItem().getPhoneScreen(),new ContactPersonScreen(phone,contact));
+                menuListView.getSelectionModel().getSelectedItem().getPhoneScreen(), new ContactPersonScreen(phone, contact));
     }
+
     @Override
     public void updateScreen() {
         preparePhoneScreenList();
@@ -42,17 +43,10 @@ public class ContactPersonScreenController extends ListViewScreenController {
     @Override
     public void addActionToOperatorKeys() {
         super.addActionToOperatorKeys();
-//        numberKeyEvent.setEventToSwitchScreen(getWantedPhoneKey(phone,0,0),getMenuListView().getSelectionModel().getSelectedItem().getPhoneScreen());
         updateSelectKeyByListViewMove();
         numberKeyEvent.setEventToCallNumberByContact(getWantedPhoneKey(phone, 1, 0), contact);
 
     }
-
-//    @Override
-//    public void updateKeysEvent() {
-//        super.updateKeysEvent();
-//        updateListViewMoving();
-//    }
 
     /**
      * this func. is added because  just in this screen there are two different action just depends on the selection item from list,
@@ -64,21 +58,5 @@ public class ContactPersonScreenController extends ListViewScreenController {
             numberKeyEvent.setEventToSwitchScreen(getWantedPhoneKey(phone, 0, 0), getMenuListView().getSelectionModel().getSelectedItem().getPhoneScreen()
                     , new ContactPersonScreen(phone, contact));
         }
-
-//        phoneKey = getWantedPhoneKey(phone, 0, 0);
-//        phoneKey.setOnAction(e -> {
-//            if (getMenuListView().getSelectionModel().getSelectedItem().getPhoneScreen().getClass().getSimpleName().equals(new CallingScreen(phone, contact).getClass().getSimpleName())) {
-//                new Function(phone).callPhoneNumber(contact);
-//                System.out.println("AAAAAAAAAAAAAAAA");
-//            } else {
-//                numberKeyEvent.setEventToSwitchScreen(phoneKey, menuListView.getSelectionModel().getSelectedItem().getPhoneScreen());
-//                new Function(phone).changeScreen(getMenuListView().getSelectionModel().getSelectedItem().getPhoneScreen());
-//                System.out.println("AAAAAAAAAAAAAAAA");
-//            }
-//
-//
-//        });
-
-
     }
 }

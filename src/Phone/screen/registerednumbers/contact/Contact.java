@@ -35,10 +35,9 @@ public class Contact {
     public String toString() {
         if (phoneNumber != null) {
             if (person != null)
-                return person.toString();//+ " " + phoneNumber; // +" "+phoneNumber
-            return phoneNumber; // +" "+phoneNumber
+                return person.toString();
+            return phoneNumber;
         }
-
         return person.toString();
     }
 
@@ -47,12 +46,11 @@ public class Contact {
         this.phoneNumber = contact.getPhoneNumber();
     }
 
-    public String getLimitedNameChracter(int lessSpace,int moreSpace) {
-        System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    public String getLimitedNameChracter(int lessSpace, int moreSpace) {
         String text = "";
 
 
-        for (int i = 0; i < totalCharNumberToShow-2-lessSpace; i++) {
+        for (int i = 0; i < totalCharNumberToShow - 2 - lessSpace; i++) {
 
             if (getPerson().toString().length() > i) {
                 text += getPerson().toString().charAt(i);
@@ -60,7 +58,7 @@ public class Contact {
                 text += "  ";
             }
 
-            if (i == totalCharNumberToShow -lessSpace- 5 && getPerson().toString().length() > i) {
+            if (i == totalCharNumberToShow - lessSpace - 5 && getPerson().toString().length() > i) {
                 text += ". . .";
                 break;
             }
@@ -70,41 +68,5 @@ public class Contact {
 
         }
         return text;
-//        if (getPerson().toString().length() > totalCharNumberToShow) {
-//            for (int i = 0; i < totalCharNumberToShow; i++) {
-//                text += getPerson().toString().charAt(i);
-//            }
-//            text += "...";
-//            return text;
-//        } else {
-//            text = getPerson().toString();
-//            System.out.println("text : " + text);
-//            System.out.println("getPerson().toString().length(): " + getPerson().toString().length());
-//            for (int i = 25+moreSpace - getPerson().toString().length(); i > 0; i--) {
-//                text += "  ";
-//
-//            }
-//            return text;
-//        }
     }
-
-//    public String getNameByLimitingIt(int totalCharNumberToShow) {
-//        return getLimitedName(totalCharNumberToShow);
-//    }
-
-//    int totalCharNumberToShow = 40;
-//
-//    public String getNameByLimitingIt() {
-//        return getLimitedName(totalCharNumberToShow);
-//    }
-
-//    String getLimitedName(int totalCharNumberToShow) {
-//        String text = "";
-//        for (int i = 0; i < totalCharNumberToShow; i++) {
-//            text += person.toString().charAt(i);
-//        }
-//        text += "...";
-//        return text;
-//    }
-
 }

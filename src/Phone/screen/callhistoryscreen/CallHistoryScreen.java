@@ -7,7 +7,5 @@ public class CallHistoryScreen extends ListViewScreen {
     public CallHistoryScreen(Phone phone) {
         super(phone, new CallHistoryController(phone));
         ((CallHistoryController) baseScreenController).setCallHistory(this);
-
-
     }
 }

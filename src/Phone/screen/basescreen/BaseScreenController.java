@@ -19,54 +19,43 @@ BaseScreenController implements Initializable {
     protected KeyAbility keyAbility;
     protected PhoneKey phoneKey;
     protected boolean screenIsLoaded = false;
-//    protected  BaseScreen baseScreen;
 
     public BaseScreenController(Phone phone) {
         this.phone = phone;
         numberKeyEvent = new NumberKeyEvent(phone);
-//        updateAllPhone();
     }
 
     /**
-     * Update screen and KeyEvents*/
+     * Update screen and KeyEvents
+     */
     public final void updateAllPhone() {
-//        phone.addCurrentScreenToStack();
-//        System.out.println("updateAllPhone --> GELDI ");
-
         if (!isScreenLoaded()) {
             updateScreen();
             screenIsLoaded = true;
         }
-//        System.out.println("DONGUDE MI ?? (BaseScreenController) "+this.getClass().getSimpleName());
         updateKeysEvent();
-//numberKeyEvent.updateAllChanges();
     }
 
     public void executeProcess() {
-
     }
 
     public void updateKeysEvent() {
         addActionToOperatorKeys();
         addActionToNumberKeys();
-
     }
 
     public void updateScreen() {
-
     }
 
     public void addActionToOperatorKeys() {
         numberKeyEvent.setEventToGoBackScreen(getWantedPhoneKey(phone, 0, 2));
         numberKeyEvent.setEventToOpenEnterPhoneNumberScreen(getWantedPhoneKey(phone, 1, 0));
         numberKeyEvent.setEventToChangeScreenToMainMenuScreen(getWantedPhoneKey(phone, 1, 2));
-
     }
 
 
     public void addActionToNumberKeys() {
         numberKeyEvent.setEventToOpenEnterPhoneNumberScreen(getNumberKeyList());
-
     }
 
 

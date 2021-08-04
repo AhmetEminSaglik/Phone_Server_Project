@@ -29,39 +29,24 @@ public abstract class ListViewScreenController extends BaseScreenController {
 
     @Override
     public void updateScreen() {
-//        getMenuListView().setMouseTransparent(true);
         preparePhoneScreenList();
 
         getMenuListView().setMouseTransparent(true);
         getMenuListView().getFocusModel().focus(0);
         getMenuListView().getSelectionModel().selectFirst();
-
-
     }
-public abstract void setSwitchScreenParamaters();
+
+    public abstract void setSwitchScreenParamaters();
+
     @Override
     public void addActionToOperatorKeys() {
         super.addActionToOperatorKeys();
-//        System.out.println("GELEN SCREEN : " + menuListView.
-//                getSelectionModel()
-//                .getSelectedItem()
-//                .getPhoneScreen()
-//                .toString() );
-
         setSwitchScreenParamaters();
         numberKeyEvent.getListViewEvent().setEventToSelecPreviousOnListView(getWantedPhoneKey(phone, 0, 1), menuListView, this);
         numberKeyEvent.getListViewEvent().setEventToSelectNextOnListView(getWantedPhoneKey(phone, 1, 1), menuListView, this);
         getMenuListView().scrollTo(getMenuListView().getSelectionModel().getSelectedItem());
-
-//      numberKeyEvent.setEventToGoUpOnListView(getWantedPhoneKey(phone, 0, 2), menuListView, this); // Bu tusunda yapabilecegi bir sey yok
-
-//        numberKeyEvent.setEventToGoDownOnListView(getWantedPhoneKey(phone, 1, 1), menuListView, this);
     }
 
-    //    public ListView<OptionScreenCard> getMenuListView() {
-//
-//        return  menuListView;
-//    }
     public abstract void preparePhoneScreenList();
 
     public Label getLblSelect() {
@@ -82,7 +67,5 @@ public abstract void setSwitchScreenParamaters();
 
     public final void addItemtoMenuList(Card card) {
         getMenuListView().getItems().add(card);
-//        System.out.println("Card : "+card);
-
     }
 }

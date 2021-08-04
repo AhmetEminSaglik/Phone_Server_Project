@@ -24,14 +24,12 @@ public class MusicPlayer {
                 playMusic(new MusicPath().getTextNotification());
             }
         } catch (NullPointerException ex) {
-            System.out.println("NULL POINTERDAYYIUZ ");
             playMusic(new MusicPath().getTextNotification());
         }
     }
 
     private void playMusic(String musicPath) {
         try {
-//            stopMusic();
             AudioInputStream stream = AudioSystem.getAudioInputStream(new File(musicPath));
 
             clip = AudioSystem.getClip();

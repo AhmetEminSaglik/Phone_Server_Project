@@ -30,9 +30,7 @@ public class MyJAXBManagement {
 
     void writeToXMLFile(Marshaller marshaller, Object object, String fileName) throws JAXBException {
         marshaller.marshal(object, new File(fileName));
-//        marshaller.marshal(object,System.out);
-        System.out.println(MyJAXBManagement.class.getSimpleName() + " Burada  Object yerine class ismi yazmamiz gerekiyor ==> Aslinda ");
-    }
+  }
 
     /**
      * @param clazz    <ns2:\\clazz is name of class which will be wrote here \\ xmlns:ns2="com.company.book">
@@ -52,11 +50,7 @@ public class MyJAXBManagement {
     public RecordServer readXMLFileAndConvertToObject(Class clazz, String fileName) throws JAXBException {
         Unmarshaller unmarshaller = getUnmarshaller(clazz);
         RecordServer recordServer = (RecordServer) unmarshaller.unmarshal(new File(fileName));
-
         recordServer.getRecordServerAllObjectsByConvertingXMLToJavaObjectClass(unmarshaller, fileName);
-//        System.out.println("recordServer.getMessageList() :::::::::::::::::::::::::: " +recordServer.getMessageList().get(recordServer.getMessageList().size()-1).getMessage());
-        recordServer.printRecordServerMessageList();
-        System.out.println(getClass().getSimpleName() + " ++++++++++++++++++++++++++ ");
         return recordServer;
     }
 

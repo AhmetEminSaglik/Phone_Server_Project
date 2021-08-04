@@ -49,7 +49,7 @@ public class NumberKeyEvent {
     }
 
     public void setEventToOpenEnterPhoneNumberScreen(PhoneKey phoneKey) {
-        phoneKey.setOnAction(new KeyAbility(phone).changeScreen(new EnterPhoneNumberScreen(phone),null));
+        phoneKey.setOnAction(new KeyAbility(phone).changeScreen(new EnterPhoneNumberScreen(phone), null));
     }
 
 
@@ -57,19 +57,11 @@ public class NumberKeyEvent {
         phoneKey.setOnAction(event);
     }
 
-//    public void setEventToGoMainMenuScreen(PhoneKey phoneKey) {//, BaseScreen baseScreen
-//        //phoneKey.getController().setAction(new KeyAbility(phone).changeScreen(baseScreen));
-//        phoneKey.setOnAction(new KeyAbility(phone).changeScreenToMainMenu(new MainMenuScreen(phone)));
-//
-//    }
-
     /**
      * this func. is used to change to new screen
      */
-    public void setEventToSwitchScreen(PhoneKey phoneKey, BaseScreen baseScreen,BaseScreen oldBaseScreenNewInitialize) {
-
-
-        phoneKey.setOnAction(new KeyAbility(phone).changeScreen(baseScreen,oldBaseScreenNewInitialize));
+    public void setEventToSwitchScreen(PhoneKey phoneKey, BaseScreen baseScreen, BaseScreen oldBaseScreenNewInitialize) {
+        phoneKey.setOnAction(new KeyAbility(phone).changeScreen(baseScreen, oldBaseScreenNewInitialize));
     }
 
     public void setEventToPrintInTextInputControl(List<PhoneKey> phoneKeyList, TextInputControl textInputControl) {
@@ -77,6 +69,7 @@ public class NumberKeyEvent {
             setEventToPrintStringInTextInputControl(item, textInputControl);
         }
     }
+
     public void setEventToPrintIntegerInTextInputControl(List<PhoneKey> keyList, TextInputControl textInputControl) {
         for (PhoneKey item : keyList) {
             item.setOnAction(
@@ -90,8 +83,6 @@ public class NumberKeyEvent {
     }
 
     public void setEventToCallNumberByContact(PhoneKey phoneKey, Contact contact) {
-//        setEventToCallNumberByPhoneNumber(phoneKey, contact.getPhoneNumber());
-//        System.out.println("CallNumberByContact : " + phoneKey.getId());
         phoneKey.setOnAction(new KeyAbility(phone).callPhoneNumber(contact));
 
     }
@@ -99,17 +90,11 @@ public class NumberKeyEvent {
     public void setEventToCallNumberByPhoneNumber(PhoneKey phoneKey, String phoneNumber) {
         Contact contact = new Function(phone).getRegisteredContactInPhoneByPhoneNumber(phoneNumber);
         setEventToCallNumberByContact(phoneKey, contact);
-//        phoneKey.setOnAction(new KeyAbility(phone).callPhoneNumber(phoneNumber));
     }
 
 
     public void setEventToChangeScreenToMainMenuScreen(PhoneKey phoneKey) {
         phoneKey.setOnAction(new KeyAbility(phone).changeScreenToMainMenu());
-        //        phoneKey.setOnAction(e -> {
-//            new KeyAbility(phone).changeScreenToMainMenu();
-////            phone.getScreenStack().clearScreenStack();
-//
-//        });
     }
 
     public void setEventToGoBackScreen(PhoneKey phoneKey) {
@@ -137,20 +122,12 @@ public class NumberKeyEvent {
     public void setEventToScrollDownTextArea(PhoneKey phoneKey, TextArea textArea) {
         phoneKey.setOnAction(new KeyAbility(phone).scrollDownTextArea(textArea));
 
-    }    public void setEventToScrollUpTextArea(PhoneKey phoneKey, TextArea textArea) {
+    }
+
+    public void setEventToScrollUpTextArea(PhoneKey phoneKey, TextArea textArea) {
         phoneKey.setOnAction(new KeyAbility(phone).scrollUpTextArea(textArea));
 
     }
-//
-//    public void setEventToHangUpCall(PhoneKey phoneKey) {
-//        phoneKey.setOnAction(new KeyAbility(phone).hangUpCall());
-//
-//    }
-//
-//    public void setEventToPickUpCall(PhoneKey phoneKey) {
-//        phoneKey.setOnAction(new KeyAbility(phone).pickUpCall());
-//
-//    }
 
     public void setEventToSaveContact(PhoneKey phoneKey, TextInputControlList textInputControlList) { //TextFieldList list
         phoneKey.setOnAction((e) -> {
@@ -159,9 +136,6 @@ public class NumberKeyEvent {
             Contact contact = new Contact(new Person(textInputControlList.get(0).getText(), textInputControlList.get(1).getText()), textInputControlList.get(2).getText());
             if (isNumberCanBeAdd(phone, contact)) {
                 phone.getRegisteredContact().add(contact);
-
-//                phone.getRegisteredContactList().add(new ContactCard(contact,
-//                        new ContactPersonScreen(phone, contact)));
                 if (isTextEmpty(contact.getPerson().getName()) && isTextEmpty(contact.getPerson().getSurname())) {
                     contact.setPerson(new Person(Person.unKnownPerson, null));
                 }
@@ -169,16 +143,9 @@ public class NumberKeyEvent {
                 for (int i = 0; i < textInputControlList.size(); i++) {
                     textInputControlList.get(i).setText("");
                 }
-
-
             }
         });
     }
-
-//    public void setEventToHangUpCall(PhoneKey phoneKey) {
-//        phoneKey.setOnAction(new KeyAbility(phone).hangUpCall());
-//
-//    }
 
     boolean isNumberCanBeAdd(Phone phone, Contact contact) {
         return (!isNumberRegistered(phone, contact) && !isTextEmpty(contact.getPhoneNumber()));
@@ -212,45 +179,13 @@ public class NumberKeyEvent {
     }
 
     public void setEventToSendMessage(PhoneKey phonKey, MessageScreenController messageScreenController) {
-
         phonKey.setOnAction(new KeyAbility(phone).sendMessage(messageScreenController));
-//            messageScreenController.getLastUpdationBeforeSendingMessage();
-//            System.out.println("AAZAZAZZAKZAXAXKZKXAZAXZAZXXAZXAZXAZXAZXAZAZX 11111111111111111111" );
-
-//            System.out.println("AAZAZAZZAKZAXAXKZKXAZAXZAZXXAZXAZXAZXAZXAZAZX 22222222222");
-
-//            System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1 ");
-//            messageScreenController.getLastUpdationBeforeSendingMessage();
-
-//            for(Contact item : contactList){}
-//            System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 2 ");
-
-//        phonKey.setOnAction(e -> {
-////            for (int i = 0; i < contactList.size(); i++) {
-////                setEventToSendMessage(contactList.get(i), phone.message);
-////            }
-//            new KeyAbility(phone).sendMessage(contactList, message);
-////            phoneKey.setOnAction(new KeyAbility(phone).callPhoneNumber(contact));
-//        });
-
     }
-
-
-//    public void setEventToSendMessage(PhoneKey phonKey, Contact contact, String message) {
-//
-//////        phoneKey.setOnAction(new KeyAbility(phone).callPhoneNumber(contact));
-////        List<Contact> contactList = new ArrayList<>();
-////        contactList.add(contact);
-////        setEventToSendMessage(phonKey, contactList, message);
-//
-//    }
-
 
     /**
      * this function is essential to update after moving on list on the screen
      */
     void updateAllChanges() {
-//        System.out.println(getClass().getName() + "  --->> updateAllPhone");
         ((BaseScreen) (phone.getPhoneController().getScreenAnchorPane().getChildren().get(0))).getController().updateAllPhone();
     }
 

@@ -25,7 +25,7 @@ public class Function<T> {
     BaseScreenController baseScreenController;
     TimeForClickValue timeForClickValue;
 
-    public Function(Phone phone, T list) { //, BaseScreenController baseScreenController
+    public Function(Phone phone, T list) {
         this(phone);
         this.list = list;
 
@@ -36,45 +36,26 @@ public class Function<T> {
         timeForClickValue = phone.getPhoneController().getTimeForClickValue();
     }
 
-//    public void changeScreenToMainMenu(BaseScreen basePhoneScreen) {
-//
-//        AnchorPane phoneScreenAnchorPane = phone.getPhoneController().getScreenAnchorPane();
-//        System.out.println("changeScreenToMainMenu ?????????? "+phoneScreenAnchorPane);
-//
-//        deleteScreenItem(phoneScreenAnchorPane);
-//        updateAllPhone(basePhoneScreen);
-//        addScreenItem(phoneScreenAnchorPane, basePhoneScreen);
-//
-//        phone.getScreenStack().clearScreenStack();
-//
-//    }
-
     public void changeScreenToMainScreen() {
         changeScreen(new MainMenuScreen(phone), null);
         phone.getScreenStack().clearScreenStack();
-        System.out.println("Geri geldi ve liste silinecek");
     }
 
     public void changeScreen(BaseScreen newScreen, BaseScreen oldScreenNewInitialize) {
         AnchorPane phoneScreenAnchorPane = phone.getPhoneController().getScreenAnchorPane();
-//        BaseScreen phoneScreen = ((BaseScreen) phone.getPhoneController().getScreenAnchorPane().getChildren().get(0));
         BaseScreen phoneScreen = phone.getPhoneController().getScreen();
         if (oldScreenNewInitialize != null) {
             addScreenToStack(oldScreenNewInitialize, newScreen);
         } else {
             addScreenToStack(phoneScreen, newScreen);
-            System.out.println("Sistem burada kitleniyor. Cunku LastLocation icin BaseScreen Yenilenemiyor. Geri Adim Atildiginda eski basescreen gosterilecek");
         }
         deleteScreenItem(phoneScreenAnchorPane);
         addScreenItem(phoneScreenAnchorPane, newScreen);
         updateAllChanges();
-//        updateAllPhone(newScreen);
     }
 
     void addScreenToStack(BaseScreen phoneScreen, BaseScreen newScreen) {
 
-        System.out.println("Phone screen : " + phoneScreen.toString());
-        System.out.println("newScreen : " + newScreen.toString());
         if (!phoneScreen.getClass().getSimpleName().equals(newScreen.getClass().getSimpleName()))
             phone.getScreenStack().addCurrentScreenToStack(phoneScreen);
 
@@ -95,78 +76,29 @@ public class Function<T> {
             deleteScreenItem(oldScreen);
             BaseScreen newScreen = phone.getScreenStack().popLastScreenFromScreenStack();
             addScreenItem(oldScreen, newScreen);
-//            updateAllPhone(newScreen);
             updateAllChanges();
-        } else {
-            System.out.println("Stack is empty : " + phone.getScreenStack().size());
         }
 
-        /*if (!phone.getScreenStack().isScreenStackEmpty()) {
-            AnchorPane oldScreen = phone.getPhoneController().getScreenAnchorPane();
-            deleteScreenItem(oldScreen);
-            BaseScreen newScreen = phone.getScreenStack().popLastScreenFromScreenStack();
-            String screenName=newScreen.getClass().getSimpleName();
-            try {
-                 Class<BaseScreen> clazz= (Class<BaseScreen>) BaseScreen.class.forName(screenName);
-//                addScreenItem(oldScreen, clazz.cast(newScreen));
-                addScreenItem(oldScreen, clazz.newInstance());
-                updateAllPhone(newScreen);
-            } catch (ClassNotFoundException e) {
-
-                System.out.println("HATA 1 ____________________________________________________________________________ HATA"+e.getMessage());
-            } catch (InstantiationException e) {
-                System.out.println("HATA 2 ____________________________________________________________________________ HATA"+e.getMessage());
-            } catch (IllegalAccessException e) {
-                System.out.println("HATA  3____________________________________________________________________________ HATA"+e.getMessage());
-            }
-        } else {
-            System.out.println("Stack is empty : " + phone.getScreenStack().size());
-
-        }*/
 
     }
 
-    /**
-     * When
-     */
     public void activateKeyByLastScreenController(Phone phone) {
         BaseScreen lastScreen = phone.getScreenStack().peekLastScreenFromScreenStack();
         lastScreen.getController().updateAllPhone();
-
-
     }
-//
-//    public void activateBasicOperatorKeys(Phone phone, String phoneNumber) {
-//        BaseScreen oldScreen = (BaseScreen) phone.getPhoneController().getScreenAnchorPane().getChildren().get(0);
-////        oldScreen.getController().
-//        NumberKeyEvent numberKeyEvent = new NumberKeyEvent(phone);
-//        numberKeyEvent.setEventToGoBackScreen(new PhoneKeyWanted(phone).getPhoneKey(0, 2));
-//        numberKeyEvent.setEventToCallNumberByPhoneNumber(new PhoneKeyWanted(phone).getPhoneKey(1, 0), phoneNumber);
-//        numberKeyEvent.setEventToChangeScreenToMainMenuScreen(new PhoneKeyWanted(phone).getPhoneKey(1, 2));
-//
-//    }
 
     public void callPhoneNumber(Contact contact) {
         BaseScreen basePhoneScreen = new CallingScreen(phone, contact);
         AnchorPane phoneScreenAnchorPane = phone.getPhoneController().getScreenAnchorPane();
         deleteScreenItem(phoneScreenAnchorPane);
         addScreenItem(phoneScreenAnchorPane, basePhoneScreen);
-//        updateAllPhone(basePhoneScreen);
-        System.out.println(getClass().getSimpleName() + "Eger Numara aramada tuslarda ya da ekranda sorun olursa updateAllPhone lazim olursa o zaman buradaki komudu etkinlestir");
         basePhoneScreen.getController().executeProcess();
-
-
     }
 
     public void sendMessageToEveryOneInContactlist(List<Contact> contactList, String message) {
-//        ((MessageScreenController) ((BaseScreen) phone.getPhoneController().getScreen()).getController()).sendMessage(contact, phone.message);
-
-//        System.out.println("CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC contact : "+contactList.size());
-//        System.out.println(" contact info : "+ contactList.get(0).toString());
         int a = 0;
         for (Contact item : contactList) {
             a++;
-            System.out.println(a + "-) ________________________contact info : " + item + " " + item.getPhoneNumber() + " " + item.getPerson().toString());
             sendMessage(item, message);
         }
         if (contactList.size() > 0)
@@ -174,11 +106,7 @@ public class Function<T> {
     }
 
     void sendMessage(Contact contact, String message) {
-//        ((MessageScreenController) ((BaseScreen) phone.getPhoneController().getScreen()).getController()).sendMessage(contact, phone.message);
-        System.out.println("ZZZZZZZZZZZZZZZZZ contact no : " + contact.getPhoneNumber());
         ((MessageScreenController) phone.getPhoneController().getScreenController()).sendMessage(contact, message);
-
-
     }
 
 
@@ -204,8 +132,6 @@ public class Function<T> {
     public void printStringValueToTextInputControl(TextInputControl textInputControl, PhoneKey phoneKey) {
 
         if (!isNull(textInputControl)) {
-
-//            String text = textInputControl.getText();
             String newStringCharacter = getStringValue(phoneKey);
 
             if (!phoneKey.getController().isCanBeAddNewCharacter()) {
@@ -218,8 +144,6 @@ public class Function<T> {
 
             updateAllChanges();
         } else {
-            System.out.println(">>>>>>>>>>>>>> text Field Null  ");
-//            System.out.println("ama buttondan alinacak deger : " + getValueForNumberArea(btnName));
         }
     }
 
@@ -234,18 +158,13 @@ public class Function<T> {
     }
 
     public void scrollTextArea(TextArea textArea, boolean seeDownText) {
-        System.out.println(" --------->>>> Uyari  textAreada kayarken  yer olmasa bile fazla bir sekilde asagiya inebiliyor siniri yok ");
         double scale = textArea.getScrollTop();
-//        scale = seeDownText == true ? +textArea.getFont().getSize() : -textArea.getFont().getSize();
         if (seeDownText) {
             scale += textArea.getFont().getSize();
-            System.out.println("NEW SCLAE ++++++++++ " + scale);
         } else {
             scale -= textArea.getFont().getSize();
-            System.out.println("NEW SCLAE -------------- " + scale);
         }
         textArea.setScrollTop(scale);
-        System.out.println("GELDIIIIIIIIIIIIIIIIIII UP");
 
     }
 
@@ -272,7 +191,6 @@ public class Function<T> {
      * -> this update is essential especial for texfield.
      */
     public void updateAllChanges() {
-//        System.out.println(getClass().getName() + "  --->> updateAllPhone");
         ((BaseScreen) (phone.getPhoneController().getScreenAnchorPane().getChildren().get(0))).getController().updateAllPhone();
     }
 
@@ -280,12 +198,8 @@ public class Function<T> {
      * this function is used to update all phone of given screen controller
      */
 
-//    void updateAllPhone(BaseScreen basePhoneScreen) {
-//        basePhoneScreen.getController().updateAllPhone();
-//
-//    }
     public Contact getRegisteredContactInPhoneByPhoneNumber(String phoneNumber) {
-        Contact contact = new IdentifyNumber(phone).identifyNumber(phoneNumber);// phone.getRegisteredContact().getContactByPhoneNumber(phoneNumber);
+        Contact contact = new IdentifyNumber(phone).identifyNumber(phoneNumber);
         if (contact != null)
             return contact;
 
@@ -294,12 +208,9 @@ public class Function<T> {
 
     public void deleteLastLetter(TextInputControl textInputControl) {
         String text = "";
-        System.out.println("SILINMEDEN ONCE TextInputControl : " + textInputControl.getText());
         for (int i = 0; i < textInputControl.getText().length() - 1; i++) {
             text += textInputControl.getText().charAt(i);
         }
         textInputControl.setText(text);
-        System.out.println("SILINDIKTEN SONRA TextInputControl : " + textInputControl.getText());
-//        return  textInputControl;
     }
 }

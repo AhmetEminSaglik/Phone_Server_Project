@@ -12,8 +12,7 @@ public class MessageHistoryCard extends Card {
         super(baseMessage.getMessageContact().getLimitedNameChracter(messageExtraInfo.length(), 10) + " " +
                 messageExtraInfo + " " + baseMessage.getTimeAtThatMoment().getCallTimeInString(), baseMessage.getBaseScreen());
         this.baseMessage = baseMessage;
-        System.out.println("Alinan mesaj : " + baseMessage.toString());
-    }
+        }
 
     public BaseMessage getMessage() {
         return baseMessage;
@@ -30,12 +29,4 @@ public class MessageHistoryCard extends Card {
     public String getMessageTime() {
         return baseMessage.getTimeAtThatMoment().getCallTimeInString();
     }
-//
-//    @Override
-//    public String toString() {
-//        return "MessageHistoryCard{" +
-//                "baseMessage=" + baseMessage +
-//                ", read=" + read +
-//                '}';
-//    }
 }

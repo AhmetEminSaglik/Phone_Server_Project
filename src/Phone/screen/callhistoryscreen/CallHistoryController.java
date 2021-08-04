@@ -22,36 +22,25 @@ public class CallHistoryController extends ListViewScreenController {
     @Override
     public void setSwitchScreenParamaters() {
         numberKeyEvent.setEventToSwitchScreen(getWantedPhoneKey(phone, 0, 0),
-                menuListView.getSelectionModel().getSelectedItem().getPhoneScreen(),new CallHistoryScreen(phone));
+                menuListView.getSelectionModel().getSelectedItem().getPhoneScreen(), new CallHistoryScreen(phone));
     }
 
     @Override
     public void preparePhoneScreenList() {
         addItemtoMenuList(new OptionScreenCard("Call New Number", new EnterPhoneNumberScreen(phone)));
         addToScreenCallHistory();
-//        addItemtoMenuList(new OptionScreenCard("Text", new MessageScreen(phone,contact)));
-
     }
 
     void addToScreenCallHistory() {
-        System.out.println("Bu sinif IIIIIII " + this);
-        List<CallHistoryCard> callHistoryList = phone.getCallHistory().getList();
+       List<CallHistoryCard> callHistoryList = phone.getCallHistory().getList();
 
         if (callHistoryList.size() > 0) {
             for (int i = callHistoryList.size() - 1; i >= 0; i--) {
-//                for (CallHistoryCard item : callHistoryList) {
-//addItemtoMenuList(Co);
-
-                System.out.println("GELEN ITEM : contact : " + callHistoryList.get(i).getContact());
-//                System.out.println(" (Card) callHistoryList.get(i) "+(Card) callHistoryList.get(i));
-                addItemtoMenuList((Card) callHistoryList.get(i));
+                 addItemtoMenuList((Card) callHistoryList.get(i));
             }
-//                }
         } else {
             addItemtoMenuList(new ContactCard(new Contact(new Person("Has not been call or get called", null), null), callHistory));
         }
-
-
     }
 
     public CallHistoryScreen getCallHistory() {
