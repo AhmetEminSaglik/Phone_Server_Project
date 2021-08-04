@@ -4,6 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
+import phone.ExceptionManagement;
 import phone.Phone;
 
 import java.io.IOException;
@@ -23,9 +24,9 @@ public class RegisteredPhoneCard extends AnchorPane {
 
             this.registeredPhoneCardController = fxmlLoader.getController();
 
-        } catch (IOException exception) {
-            System.out.println("Exception : " + exception.getMessage());
-            throw new RuntimeException(exception.getMessage());
+        } catch (IOException ex) {
+            ExceptionManagement.printException(ex);
+            throw new RuntimeException(ex.getMessage());
         }
     }
 

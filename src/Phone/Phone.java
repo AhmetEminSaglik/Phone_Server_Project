@@ -45,9 +45,9 @@ public class Phone extends Application {
 
             primaryStage.show();
 
-        } catch (IOException e) {
-            System.out.println("Exception :" + e.getMessage());
-            e.printStackTrace();
+        } catch (IOException ex) {
+            ExceptionManagement.printException(ex);
+            ex.printStackTrace();
 
             System.exit(0);
         }

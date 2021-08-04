@@ -1,6 +1,7 @@
 package musicplayer;
 
 import music.musicpath.MusicPath;
+import phone.ExceptionManagement;
 
 import javax.sound.sampled.*;
 import java.io.File;
@@ -43,11 +44,12 @@ public class MusicPlayer {
             clip.start();
 
         } catch (LineUnavailableException ex) {
-            Logger.getLogger(MusicPlayer.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(MusicPlayer.class.getName()).log(Level.SEVERE, null, ex);
+            ExceptionManagement.printException(ex);
         } catch (IOException ex) {
-            Logger.getLogger(MusicPlayer.class.getName()).log(Level.SEVERE, null, ex);
+            ExceptionManagement.printException(ex);
         } catch (UnsupportedAudioFileException ex) {
-            Logger.getLogger(MusicPlayer.class.getName()).log(Level.SEVERE, null, ex);
+            ExceptionManagement.printException(ex);
         }
     }
 

@@ -5,6 +5,7 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Label;
+import phone.ExceptionManagement;
 import phone.Phone;
 import phone.screen.callingscreen.BaseCallScreenController;
 import phone.utility.IdentifyNumber;
@@ -150,8 +151,8 @@ public class SettingTwoPhoneForCallingConnection {
                             }
                         });
                     }
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+                } catch (InterruptedException ex) {
+                    ExceptionManagement.printException(ex);
                 }
             }
         }).start();
@@ -263,7 +264,7 @@ public class SettingTwoPhoneForCallingConnection {
                 lblSituation.setText(text);
             }
         } catch (ClassCastException ex) {
-            System.out.println("------------------------------------->>>> EXCEPTION " + ex.getMessage());
+            ExceptionManagement.printException(ex);
         }
 
     }

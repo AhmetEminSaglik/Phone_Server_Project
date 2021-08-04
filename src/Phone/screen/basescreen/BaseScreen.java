@@ -1,5 +1,6 @@
 package phone.screen.basescreen;
 
+import phone.ExceptionManagement;
 import phone.Phone;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
@@ -22,7 +23,7 @@ BaseScreen extends AnchorPane {
         try {
             fxmlLoader.load();
         } catch (IOException ex) {
-            System.out.println("EXCEPTION " + ex.getMessage() + ">>");
+            ExceptionManagement.printException(ex);
             System.exit(0);
         }
 

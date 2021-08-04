@@ -1,5 +1,7 @@
 package phone.key;
 
+import phone.ExceptionManagement;
+
 public class IntegerFromString {
     String text;
 
@@ -22,9 +24,8 @@ public class IntegerFromString {
         try {
             int integerValue = Integer.parseInt(stringValue);
             return integerValue;
-        } catch (NumberFormatException e) {
-            System.out.println("EXCEPTION : "+e.getMessage());
-
+        } catch (NumberFormatException ex) {
+//            ExceptionManagement.printException(ex);
         }
         return -1;
 

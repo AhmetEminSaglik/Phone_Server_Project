@@ -2,6 +2,7 @@ package phone.key;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import phone.ExceptionManagement;
 
 import java.io.IOException;
 
@@ -21,9 +22,9 @@ public class PhoneKey extends Button {
 
         try {
             fxmlLoader.load();
-        } catch (IOException exception) {
-            System.out.println("HATAAA ::: >>> " + exception.getMessage());
-            throw new RuntimeException(exception.getMessage());
+        } catch (IOException ex) {
+            ExceptionManagement.printException(ex);
+            throw new RuntimeException(ex.getMessage());
 
         }
     }

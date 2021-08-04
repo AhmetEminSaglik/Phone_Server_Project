@@ -1,6 +1,7 @@
 package server.registeredphonecard.archive;
 
 
+import phone.ExceptionManagement;
 import server.registeredphonecard.archive.recordclass.RecordCall;
 import server.registeredphonecard.archive.recordclass.RecordMessage;
 
@@ -55,8 +56,8 @@ public class RecordServer {
         RecordServer recordServer = null;
         try {
             recordServer = (RecordServer) unmarshaller.unmarshal(new File(fileName));
-        } catch (JAXBException e) {
-            e.printStackTrace();
+        } catch (JAXBException ex) {
+            ExceptionManagement.printException(ex);
         }
 
         return recordServer;

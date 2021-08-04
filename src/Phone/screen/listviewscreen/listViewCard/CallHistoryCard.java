@@ -4,7 +4,8 @@ import date.TimeAtThatMoment;
 import phone.screen.basescreen.BaseScreen;
 import phone.screen.registerednumbers.contact.Contact;
 
-public class CallHistoryCard extends Card {
+public class
+CallHistoryCard extends Card {
     Contact contact;
     BaseScreen baseScreen;
     String callExpression;

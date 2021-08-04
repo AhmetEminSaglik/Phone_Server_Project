@@ -1,5 +1,6 @@
 package server.registeredphonecard.archive;
 
+import phone.ExceptionManagement;
 import server.Server;
 
 import javax.xml.bind.JAXBException;
@@ -19,19 +20,18 @@ public class XMLFileOperation {
 
         try {
             myJAXBManagement.writeObjectToXMLFile(clazz, object, fileName);
-        } catch (JAXBException e) {
-            printError(e);
-            e.printStackTrace();
-        } catch (FileNotFoundException e) {
-            printError(e);
+        } catch (JAXBException ex) {
+            ExceptionManagement.printException(ex);
+        } catch (FileNotFoundException ex) {
+            ExceptionManagement.printException(ex);
         }
     }
 
     RecordServer readFile(Class clazz, String fileName) throws FileNotFoundException {
         try {
             return myJAXBManagement.readXMLFileAndConvertToObject(clazz, fileName); // return RecordServer
-        } catch (JAXBException e) {
-            printError(e);
+        } catch (JAXBException ex) {
+            ExceptionManagement.printException(ex);
         }
         return null;
     }
@@ -51,7 +51,6 @@ public class XMLFileOperation {
         try {
             updateFile(clazz, object, fileName, getInterfaceList());
         } catch (IllegalArgumentException ex) {
-            System.out.println("Exception : " + ex.getMessage());
             createAndWriteFile(clazz, object, fileName);
         } catch (FileNotFoundException e) {
             createAndWriteFile(clazz, object, fileName);
