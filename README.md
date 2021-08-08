@@ -153,6 +153,28 @@ Features:
 -We  with using "3" phone  tried to call "2" phone  but it is failed because "2" is busy.
 ![27.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/27.png)
 
+-We closed the "2" phone  and it can not reachable right now.
+![28.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/28.png)
+
+-But we as being owning of "3" phone we want to call so much "2" phone. I dont know why we are so eagerly try to call "2" phone. Maybe it is our gir/boy friend. But It is failed again. We got a feedback something like it can not reachable now. And we are sad because we could not have  any call with "2" phone. 
+![29.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/29.png)
+
+
+- Still as being owning of "3" phone we think that "Do I remember number of my lover wrong? And we call another random  number  because we got furious to  ourselves.  But there is not any number like this random we called.
+![30.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/30.png)
+
+-Now we created  a new phone which is "4".
+-"1" and "2", "3", "4" have call between them. At the same time there can be  a lot call.
+![31.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/31.png)
+
+-Now it is time to see what did we do? There is a  xml documentation again. new calls is added to before ones. Every new call or message procees is written top and old ones  slide to bottom.
+![32.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/32.png)
+
+Thank you for your time. I hope you enjoyed and understood what I did reading notes or seeing images.
+
+
+
+
 
 
 
