@@ -31,7 +31,48 @@ Features:
 - When we run the project , two phones are created as "1" and "2".
 - "1" phone's screen  is MainMenuScreen.
 - When we go through  "Contact" from MainMenuScreen then we can see screen as "2" phone's screen which is ContactScreen.
-- 
+
 ![1.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/1.png)
+
+
+-When we go through to "Registered Number" in "2" phone it is empty. We did not add any number. Then Let's go "Add Number"  in "1" phone
+![2.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/2.png)
+
+- We see "Name", "Surname" and "Phone No". I wrote some informations to here. 
+- By the way Phone No texfield just can be wrote numbers,
+- When we press the button which is under "Select" writing then it is saved.
+- 
+![3.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/3.png)
+
+- Now "1" phone has 1 contact in ContactScreen, "2" phone has not any contact in ContactScreen.
+![4.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/4.png)
+
+- When we go through registered contact ( which seen as "AHMET EMIN SAGLIK") then we can see there are 2 options like following image.
+- We can press  (green)"---" or button which is under "Select" writing. Both of them call the contact.
+
+![5.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/5.png)
+
+- Top Label : If contact is registered then it is seen how contact's name was registered. Otherwise is seen phone number.
+- Bottom Label : describes the action.
+![6.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/6.png)
+
+
+
+- If Dialed phone press the "(green)---" then communication starts. 
+- Middle Label : Total communication time is wrote.
+![7.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/7.png)
+
+
+- If One of the phones which have in call,  press "(red)---" then call is over.
+
+
+![8.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/8.png)
+
+
+
+
+
+
+
 
 
