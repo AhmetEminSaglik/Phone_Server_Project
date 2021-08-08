@@ -1,10 +1,15 @@
-# PhoneProject_2
-Oncekinde sorun var github'a yukleyemiyorum
 
+Hello Everyone. I created an application that is old time communication phone which had keys by using java FXML and JAXB. 
 
-![1.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/images/1.png) 
+Phone 
 
-![1.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/images%202/1.png) 
 
 ![phone.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/phone.png) 
+
+
+![phone.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/phone.png) 
+
+
+
+
 
