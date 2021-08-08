@@ -69,6 +69,21 @@ Features:
 ![8.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/8.png)
 
 
+-Now it is time to look call history. So We go through "Call" option which is in MainMenuScreen.
+
+![9.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/9.png)
+
+
+- There are some different symbol and their explanations in the following lines :
+-   ">>"  : I called 
+-   "<<"  : I am dialed
+-   "✓"  : Connection was succesfull;
+-   "X"  : Connection was failed; (Well this is not shown right now but we may see in future images.)
+-    And call time is seen there.
+![10.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/10.png)
+
+
+
 
 
 
