@@ -132,9 +132,20 @@ Features:
 -Let's have a look in xml file (I used JAXB to create xml documentation as call and message history)
 ![21.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/21.png)
 
+
+-Let's create "3" phone  with using server.
 ![22.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/22.png)
 
 
+-Ok. It is created. We can see it.
+![23.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/23.png)
+
+
+-Now it is time to call a number which is not registered. We can go through  "Call New Number" in CallScreen which can be reached by going through "Call" in MainMenuScreen.
+![24.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/23.png)
+
+-
+![25.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/25.png)
 
 
 
