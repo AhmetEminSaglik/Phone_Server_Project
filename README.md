@@ -32,6 +32,6 @@ Features:
 -) "1" phone's screen  is MainMenuScreen.
 -) When we go through  "Contact" from MainMenuScreen then we can see screen as "2" phone's screen which is ContactScreen.
 
-!(https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/1.png)
+![1.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/1.png)
 
 
