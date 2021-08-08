@@ -144,8 +144,16 @@ Features:
 -Now it is time to call a number which is not registered. We can go through  "Call New Number" in CallScreen which can be reached by going through "Call" in MainMenuScreen.
 ![24.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/23.png)
 
--
+-Now we write here ("2" phone where is written as "Enter Phone Number" with gray color) phone number that we want to call. 
 ![25.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/25.png)
+
+-Now  "1" and "2" phones is busy  with call. And we have a available phone which is "3".
+![26.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/26.png)
+
+-We  with using "3" phone  tried to call "2" phone  but it is failed because "2" is busy.
+![27.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/27.png)
+
+
 
 
 
