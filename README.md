@@ -54,6 +54,7 @@ Features:
 
 - Top Label : If contact is registered then it is seen how contact's name was registered. Otherwise is seen phone number.
 - Bottom Label : describes the action.
+- And we hear a  voice from the phone which is dialed.
 ![6.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/6.png)
 
 
@@ -81,6 +82,59 @@ Features:
 -   "X"  : Connection was failed; (Well this is not shown right now but we may see in future images.)
 -    And call time is seen there.
 ![10.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/10.png)
+
+
+- Now it is time to see other option in RegisteredContactScreen options.
+- We go through the "Text" option in "1" phone.
+![11.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/11.png)
+
+
+- "To Whome" part is filled automatic because try to do something  with contact which is added as this name. And we can not change it.
+- I wrote a message that is "HELLO AHMET. HOW ARE YOU?".
+- Now we press to  button which is under "Send" writing. 
+- And we hear a message voice from phone which received a message.
+![12.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/12.png)
+
+
+- Now we look "Sent Messages" option from the "1" phone which we sent message.
+- Now we look "Received Messages" option from the "2" phone which we received message.
+![13.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/13.png)
+
+
+-We see message for both phone. "2" phone has a additional word which is "Unread" that means that  phone which received message did not see the message.
+
+![14.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/14.png)
+
+
+- Message is same in the both phone.
+![15.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/15.png)
+
+- Now se wonder as being "2" phone and want to send a message to "1"phone and learn who is it.
+- Now we go through "Send Message" And filled "To Whome" part. And wrote the message text. And sent it.
+
+![16.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/16.png)
+
+- "1" phone received message. We will look "Received Messages" for this phone.
+- "2" phone sent message. We will look "Sent Message" for this phone.
+![17.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/17.png)
+
+
+- As before example we saw it goes same way.
+![18.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/18.png)
+
+
+- And messages are same.
+![19.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/19.png)
+
+-When we go back "Unread" additional word is gone. Because we read the message.
+![20.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/20.png)
+
+-Let's have a look in xml file (I used JAXB to create xml documentation as call and message history)
+![21.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/21.png)
+
+![22.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/22.png)
+
+
 
 
 
