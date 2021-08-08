@@ -14,7 +14,7 @@ CallHistoryCard extends Card {
     String communicationTime;
 
     public CallHistoryCard(Contact contact, String callExpression, String answeredExpression, TimeAtThatMoment timeAtThatMoment, String communicationTime) {
-        this(contact.getLimitedNameChracter(1, 5) + " " + callExpression + " " + answeredExpression + timeAtThatMoment.getCallTimeInString(), null);
+        this(contact.getLimitedNameChracter(3) + " " + callExpression + " " + answeredExpression + timeAtThatMoment.getCallTimeInString(), null);
 
         this.contact = contact;
         this.baseScreen = baseScreen;

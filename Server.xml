@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:recordServer xmlns:ns2="Server">
+    <CallList>
+        <CallInfo>
+            <numberCalled>1</numberCalled>
+            <numberDialed>2</numberDialed>
+            <callTime>AUGUST 8, 18:13:19</callTime>
+            <connected>false</connected>
+            <communicationTime>00:00:00</communicationTime>
+        </CallInfo>
+        <CallInfo>
+            <numberCalled>1</numberCalled>
+            <numberDialed>2</numberDialed>
+            <callTime>AUGUST 8, 18:12:58</callTime>
+            <connected>false</connected>
+            <communicationTime>00:00:00</communicationTime>
+        </CallInfo>
+        <CallInfo>
+            <numberCalled>2</numberCalled>
+            <numberDialed>1</numberDialed>
+            <callTime>AUGUST 8, 18:12:43</callTime>
+            <connected>false</connected>
+            <communicationTime>00:00:00</communicationTime>
+        </CallInfo>
+        <CallInfo>
+            <numberCalled>1</numberCalled>
+            <numberDialed>2</numberDialed>
+            <callTime>AUGUST 8, 18:11:59</callTime>
+            <connected>false</connected>
+            <communicationTime>00:00:00</communicationTime>
+        </CallInfo>
+        <CallInfo>
+            <numberCalled>2</numberCalled>
+            <numberDialed>1</numberDialed>
+            <callTime>AUGUST 8, 18:11:42</callTime>
+            <connected>false</connected>
+            <communicationTime>00:00:00</communicationTime>
+        </CallInfo>
+        <CallInfo>
+            <numberCalled>2</numberCalled>
+            <numberDialed>1</numberDialed>
+            <callTime>AUGUST 8, 18:10:57</callTime>
+            <connected>false</connected>
+            <communicationTime>00:00:00</communicationTime>
+        </CallInfo>
+        <CallInfo>
+            <numberCalled>1</numberCalled>
+            <numberDialed>2</numberDialed>
+            <callTime>AUGUST 8, 18:09:49</callTime>
+            <connected>false</connected>
+            <communicationTime>00:00:00</communicationTime>
+        </CallInfo>
+        <CallInfo>
+            <numberCalled>1</numberCalled>
+            <numberDialed>2</numberDialed>
+            <callTime>AUGUST 8, 18:09:03</callTime>
+            <connected>false</connected>
+            <communicationTime>00:00:00</communicationTime>
+        </CallInfo>
+        <CallInfo>
+            <numberCalled>2</numberCalled>
+            <numberDialed>1</numberDialed>
+            <callTime>AUGUST 8, 18:08:01</callTime>
+            <connected>false</connected>
+            <communicationTime>00:00:00</communicationTime>
+        </CallInfo>
+        <CallInfo>
+            <numberCalled>1</numberCalled>
+            <numberDialed>2</numberDialed>
+            <callTime>AUGUST 8, 18:07:04</callTime>
+            <connected>true</connected>
+            <communicationTime>00 : 00 : 00</communicationTime>
+        </CallInfo>
+        <CallInfo>
+            <numberCalled>1</numberCalled>
+            <numberDialed>2</numberDialed>
+            <callTime>AUGUST 8, 17:58:35</callTime>
+            <connected>true</connected>
+            <communicationTime>00 : 00 : 23</communicationTime>
+        </CallInfo>
+        <CallInfo>
+            <numberCalled>1</numberCalled>
+            <numberDialed>2</numberDialed>
+            <callTime>AUGUST 8, 17:58:06</callTime>
+            <connected>false</connected>
+            <communicationTime>00:00:00</communicationTime>
+        </CallInfo>
+        <CallInfo>
+            <numberCalled>1</numberCalled>
+            <numberDialed>2</numberDialed>
+            <callTime>AUGUST 8, 17:55:37</callTime>
+            <connected>false</connected>
+            <communicationTime>00:00:00</communicationTime>
+        </CallInfo>
+    </CallList>
+    <MessageList>
+        <messageInfo>
+            <numberSentMessage>1</numberSentMessage>
+            <numberReceivedMessage>2</numberReceivedMessage>
+            <text>A</text>
+            <time>AUGUST 8, 18:13:23</time>
+        </messageInfo>
+        <messageInfo>
+            <numberSentMessage>2</numberSentMessage>
+            <numberReceivedMessage>1</numberReceivedMessage>
+            <text>A</text>
+            <time>AUGUST 8, 18:11:01</time>
+        </messageInfo>
+        <messageInfo>
+            <numberSentMessage>1</numberSentMessage>
+            <numberReceivedMessage>2</numberReceivedMessage>
+            <text>B1A1A</text>
+            <time>AUGUST 8, 18:10:20</time>
+        </messageInfo>
+        <messageInfo>
+            <numberSentMessage>1</numberSentMessage>
+            <numberReceivedMessage>2</numberReceivedMessage>
+            <text>A</text>
+            <time>AUGUST 8, 18:09:52</time>
+        </messageInfo>
+        <messageInfo>
+            <numberSentMessage>1</numberSentMessage>
+            <numberReceivedMessage>2</numberReceivedMessage>
+            <text>A</text>
+            <time>AUGUST 8, 18:09:08</time>
+        </messageInfo>
+        <messageInfo>
+            <numberSentMessage>2</numberSentMessage>
+            <numberReceivedMessage>1</numberReceivedMessage>
+            <text>A</text>
+            <time>AUGUST 8, 18:08:04</time>
+        </messageInfo>
+        <messageInfo>
+            <numberSentMessage>1</numberSentMessage>
+            <numberReceivedMessage>2</numberReceivedMessage>
+            <text>A</text>
+            <time>AUGUST 8, 18:07:09</time>
+        </messageInfo>
+    </MessageList>
+</ns2:recordServer>

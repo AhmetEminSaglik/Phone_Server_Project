@@ -20,6 +20,6 @@ public abstract class MessageHistory extends History<MessageHistoryCard> {//exte
 
     public void updateMessageHistoryCardReadSituation(BaseMessage baseMessage) {
         MessageHistoryCard messageHistoryCard = findMessageHistoryCard(baseMessage);
-        messageHistoryCard.setName(messageHistoryCard.getMessageContact().getLimitedNameChracter(0, 10) + " " + messageHistoryCard.getMessageTime());
+        messageHistoryCard.setName(messageHistoryCard.getMessageContact().getLimitedNameChracter(0) + " " + messageHistoryCard.getMessageTime());
     }
 }

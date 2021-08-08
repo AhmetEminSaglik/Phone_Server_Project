@@ -9,7 +9,7 @@ public class MessageHistoryCard extends Card {
     boolean read = false;
 
     public MessageHistoryCard(BaseMessage baseMessage, String messageExtraInfo) {
-        super(baseMessage.getMessageContact().getLimitedNameChracter(messageExtraInfo.length(), 10) + " " +
+        super(baseMessage.getMessageContact().getLimitedNameChracter(messageExtraInfo.length()/2) + " " +
                 messageExtraInfo + " " + baseMessage.getTimeAtThatMoment().getCallTimeInString(), baseMessage.getBaseScreen());
         this.baseMessage = baseMessage;
         }

@@ -46,7 +46,7 @@ public class Contact {
         this.phoneNumber = contact.getPhoneNumber();
     }
 
-    public String getLimitedNameChracter(int lessSpace, int moreSpace) {
+    public String getLimitedNameChracter(int lessSpace) { //, int moreSpace
         String text = "";
 
 
@@ -63,7 +63,8 @@ public class Contact {
                 break;
             }
         }
-        for (int i = 0; i < moreSpace; i++) {
+
+      for (int i = 0; i < 5; i++) {
             text += "  ";
 
         }
