@@ -11,7 +11,7 @@ This is server we write number and create a phone.
 - Phones can be activate or inactive  by server  : if phone can be reached then it has green circle, else it has black circle.
 - if phone is busy (for example phone is calling someone) : it has red circle
 
-![server.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/server.png) 
+<br/>![server.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/server.png) 
 <br/><br/>
 
 <hr/>
