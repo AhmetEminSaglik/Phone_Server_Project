@@ -25,9 +25,8 @@ Phone can be divided as two parts  like screen (red  line and has menu) and keys
 <h3><b> Features :</b></h3>
 - Have to press "Ʌ" to move up or press "V" to move down.
 - If wanted to write any character which is on buttons to textfield then have to press same button as character's index value times. Within every press time is reseted to 1.5 second.
- <br/>(Actually index is started by 0  but I dont know how to name it so I wrote that. I am sorry if it makes you confusing)
- - ssssss
- <br/>![phone.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/phone.png) 
+<br/>(Actually index is started by 0  but I dont know how to name it so I wrote that. I am sorry if it makes you confusing)
+<br/>![phone.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/phone.png) 
 <br/><br/>
 <hr/>
 
