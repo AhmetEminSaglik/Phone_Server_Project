@@ -23,6 +23,12 @@ This is a phone which is created as being has number  "1".
 Phone can be divided as two parts  like screen (red  line and has menu) and keys buttons).
 
 <h3><b> Features :</b></h3>
+
+- Can be seen the phones which are created.
+- Can be seen the phones are active or inactive.
+- Phones can be activate or inactive  by server  : if phone can be reached then it has green circle(activate), else it has black circle(inactive).
+- if phone is busy (for example phone is calling someone) : it has red circle.
+
 - Have to press "Ʌ" to move up or press "V" to move down.
 - If wanted to write any character which is on buttons to textfield then have to press same button as character's index value times. Within every press time is reseted to 1.5 second.
 <br/>(Actually index is started by 0  but I dont know how to name it so I wrote that. I am sorry if it makes you confusing)
