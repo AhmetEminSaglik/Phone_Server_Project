@@ -10,8 +10,7 @@ This is server we write number and create a phone.
 - Can be seen the phones are active or inactive
 - Phones can be activate or inactive  by server  : if phone can be reached then it has green circle, else it has black circle.
 - if phone is busy (for example phone is calling someone) : it has red circle
-<br/>
-![server.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/server.png) 
+<br/>![server.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/server.png) 
 <br/><br/>
 
 <hr/>
@@ -25,8 +24,8 @@ Can be divided as two parts  like screen (red  line and has menu) and keys butto
 - Have to press "Ʌ" to move up or press "V" to move down.
 - If wanted to write any character which is on buttons to textfield then have to press same button as character's index value times. Within every press time is reseted to 1.5 second.
  <br/>(Actually index is started by 0  but I dont know how to name it so I wrote that. I am sorry if it makes you confusing)
- <br/>
-![phone.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/phone.png) 
+ 
+ <br/>![phone.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/phone.png) 
 <br/><br/>
 <hr/>
 
@@ -34,15 +33,13 @@ Can be divided as two parts  like screen (red  line and has menu) and keys butto
 - When we run the project , two phones are created as "1" and "2".
 - "1" phone's screen  is MainMenuScreen.
 - When we go through  "Contact" from MainMenuScreen then we can see screen as "2" phone's screen which is ContactScreen.
-<br/>
-![1.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/1.png)
+<br/>![1.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/1.png)
 <br/><br/>
 <hr/>
 
 
 - When we go through to "Registered Number" in "2" phone it is empty. We did not add any number. Then Let's go "Add Number"  in "1" phone
-<br/>
-![2.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/2.png)
+<br/>![2.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/2.png)
 <br/><br/>
 <hr/>
 
