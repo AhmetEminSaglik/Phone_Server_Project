@@ -2,9 +2,10 @@
 Hello Everyone. I created an application that is old time communication phone which had keys by using java FXML and JAXB. 
 
 
-<h3 style="color:red"><b> Server :</b></h3>
+<h2><b> Server :</b></h2>
 This is server we write number and create a phone.
 
+<h3><b> Server :</b></h3>
 Features:
 - Can be seen the phones which are created.
 - Can be seen the phones are active or inactive
@@ -28,16 +29,6 @@ Features:
 ![phone.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/phone.png) 
 <br/><br/>
 <hr/>
-
-
-
-
-
-
-
-
-
-
 
 - Let's Learn What Can We Do In This Project: 
 - When we run the project , two phones are created as "1" and "2".
