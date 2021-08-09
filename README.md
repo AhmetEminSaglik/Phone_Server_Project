@@ -12,6 +12,7 @@ Features:
 
 ![server.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/server.png) 
 
+
 <hr/>
 Phone :
 This is a phone which is created as being has number  "1".
@@ -26,6 +27,16 @@ Features:
 ![phone.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/phone.png) 
 <hr/>
 
+
+
+
+
+
+
+
+
+
+
 - Let's Learn What Can We Do In This Project: 
 - When we run the project , two phones are created as "1" and "2".
 - "1" phone's screen  is MainMenuScreen.
@@ -33,10 +44,12 @@ Features:
 ![1.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/1.png)
 <hr/>
 
+
 - When we go through to "Registered Number" in "2" phone it is empty. We did not add any number. Then Let's go "Add Number"  in "1" phone
 
 ![2.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/2.png)
 <hr/>
+
 
 - We see "Name", "Surname" and "Phone No". I wrote some informations to here. 
 - By the way Phone No texfield just can be wrote numbers,
@@ -45,16 +58,19 @@ Features:
 ![3.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/3.png)
 <hr/>
 
+
 - Now "1" phone has 1 contact in ContactScreen, "2" phone has not any contact in ContactScreen.
  
 ![4.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/4.png)
 <hr/>
+
 
 - When we go through registered contact ( which seen as "AHMET EMIN SAGLIK") then we can see there are 2 options like following image.
 - We can press  (green)"---" or button which is under "Select" writing. Both of them call the contact.
 
 ![5.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/5.png)
 <hr/>
+
 
 - Top Label : If contact is registered then it is seen how contact's name was registered. Otherwise is seen phone number.
 - Bottom Label : describes the action.
