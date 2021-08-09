@@ -77,7 +77,7 @@ Features:
 
 - There are some different symbol and their explanations in the following lines :
 -   ">>"  : I called 
--   "<<"  : I am dialed
+-   "<<"  : I was dialed
 -   "✓"  : Connection was succesfull;
 -   "X"  : Connection was failed; (Well this is not shown right now but we may see in future images.)
 -    And call time is seen there.
