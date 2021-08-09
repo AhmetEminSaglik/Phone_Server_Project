@@ -162,10 +162,10 @@ Features:
 ![30.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/30.png)
 
 - Now we created  a new phone which is "4".
--"1" and "2", "3", "4" have call between them. At the same time there can be  a lot call.
+- "1" and "2", "3", "4" have call between them. At the same time there can be  a lot call.
 ![31.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/31.png)
 
--Now it is time to see what did we do? There is a  xml documentation again. new calls is added to before ones. Every new call or message procees is written top and old ones  slide to bottom.
+- Now it is time to see what did we do? There is a  xml documentation again. new calls is added to before ones. Every new call or message procees is written top and old ones  slide to bottom.
 ![32.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/32.png)
 
 Thank you for your time. I hope you enjoyed and understood what I did reading notes or seeing images.
