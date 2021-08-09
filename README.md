@@ -272,6 +272,3 @@ Phone can be divided as two parts  like screen (red  line and has menu) and keys
 <hr/>
 
 Thank you for your time. I hope you enjoyed and understood what I did by reading notes or seeing images.
-
-
-
