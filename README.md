@@ -32,7 +32,7 @@ Phone can be divided as two parts  like screen (red  line and has menu) and keys
 <br/><br/>
 <hr/>
 
-- Let's Learn What Can We Do In This Project: 
+<h3> <b>Let's Learn What Can We Do In This Project: </b></h3>
 - When we run the project , two phones are created as "1" and "2".
 - "1" phone's screen  is MainMenuScreen.
 - When we go through  "Contact" from MainMenuScreen then we can see screen as "2" phone's screen which is ContactScreen.
