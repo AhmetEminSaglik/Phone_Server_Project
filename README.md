@@ -33,7 +33,7 @@ Features:
 ![1.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/1.png)
 
 
--When we go through to "Registered Number" in "2" phone it is empty. We did not add any number. Then Let's go "Add Number"  in "1" phone
+- When we go through to "Registered Number" in "2" phone it is empty. We did not add any number. Then Let's go "Add Number"  in "1" phone
 ![2.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/2.png)
 
 - We see "Name", "Surname" and "Phone No". I wrote some informations to here. 
