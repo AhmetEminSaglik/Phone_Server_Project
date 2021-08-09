@@ -1,5 +1,6 @@
-
-Hello Everyone. I created an application that is old time communication phone which had keys by using java FXML and JAXB. 
+<b>This application includes simple calling and messaging features of old mobile phones. And I used FXML and JAXB to create this project.</b>
+<br/>
+Hello everyone. I created an application that is old time communication phone which had keys by using java FXML and JAXB. 
 
 <h2><b> Server :</b></h2>
 This is server we write number to create phone.
@@ -272,3 +273,6 @@ Phone can be divided as two parts  like screen (red  line and has menu) and keys
 <hr/>
 
 Thank you for your time. I hope you enjoyed and understood what I did by reading notes or seeing images.
+
+
+
