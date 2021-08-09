@@ -2,10 +2,6 @@
 Hello Everyone. I created an application that is old time communication phone which had keys by using java FXML and JAXB. 
 
 
-<h2><b> Server :</b></h2>
-This is server we write number and create a phone.
-
-<h3><b> Features :</b></h3>
 - Can be seen the phones which are created.
 - Can be seen the phones are active or inactive
 - Phones can be activate or inactive  by server  : if phone can be reached then it has green circle, else it has black circle.
