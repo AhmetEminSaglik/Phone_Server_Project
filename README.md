@@ -32,7 +32,7 @@ Phone can be divided as two parts  like screen (red  line and has menu) and keys
 <br/><br/>
 <hr/>
 
-<h3> <b>Let's Learn What Can We Do In This Project: </b></h3>
+<h3> <b>Let's Learn What Can We Do In This Project : </b></h3>
 - When we run the project , two phones are created as "1" and "2".
 - "1" phone's screen  is MainMenuScreen.
 - When we go through  "Contact" from MainMenuScreen then we can see screen as "2" phone's screen which is ContactScreen.
@@ -43,6 +43,7 @@ Phone can be divided as two parts  like screen (red  line and has menu) and keys
 
 
 - When we go through to "Registered Number" in "2" phone it is empty. We did not add any number. Then Let's go "Add Number"  in "1" phone
+
 <br/>![2.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/2.png)
 <br/><br/>
 <hr/>
@@ -74,12 +75,14 @@ Phone can be divided as two parts  like screen (red  line and has menu) and keys
 - Top Label : If contact is registered then it is seen how contact's name was registered. Otherwise is seen phone number.
 - Bottom Label : describes the action.
 - And we hear a  voice from the phone which is dialed.
+
 <br/>![6.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/6.png)
 <br/><br/>
 <hr/>
 
 - If Dialed phone press the "(green)---" then communication starts. 
 - Middle Label : Total communication time is wrote.
+
 <br/>![7.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/7.png)
 <br/><br/>
 <hr/>
@@ -268,19 +271,7 @@ Phone can be divided as two parts  like screen (red  line and has menu) and keys
 <br/><br/>
 <hr/>
 
-Thank you for your time. I hope you enjoyed and understood what I did reading notes or seeing images.
-
-
-
-
-
-
-
-
-
-
-
-
+Thank you for your time. I hope you enjoyed and understood what I did by reading notes or seeing images.
 
 
 
