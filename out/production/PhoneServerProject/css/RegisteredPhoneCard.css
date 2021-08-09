@@ -1,0 +1,9 @@
+.phoneSituationOnline{
+    -fx-background-color:green
+}
+.phoneSituationOffline{
+    -fx-background-color:black;
+}
+.phoneSituationBusy{
+    -fx-background-color:red;
+}
