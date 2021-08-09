@@ -1,6 +1,13 @@
 
 Hello Everyone. I created an application that is old time communication phone which had keys by using java FXML and JAXB. 
 
+diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+
 <h3 style="color:red"><b> Server :</b></h3>
 This is server we write number and create a phone.
 
