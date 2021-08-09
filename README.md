@@ -1,7 +1,7 @@
 
 Hello Everyone. I created an application that is old time communication phone which had keys by using java FXML and JAXB. 
 
-Server : 
+<b>Server :</b>
 This is server we write number and create a phone.
 
 Features:
