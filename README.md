@@ -1,6 +1,10 @@
 
 Hello Everyone. I created an application that is old time communication phone which had keys by using java FXML and JAXB. 
 
+<h2><b> Server :</b></h2>
+This is server we write number and create a phone.
+
+<h3><b> Features :</b></h3>
 
 - Can be seen the phones which are created.
 - Can be seen the phones are active or inactive
@@ -12,7 +16,7 @@ Hello Everyone. I created an application that is old time communication phone wh
 
 <hr/>
 
-<h2><b>Phone :</b></h2>
+<h2><b> Phone :</b></h2>
 This is a phone which is created as being has number  "1".
 NOTE :  Phone number is added to phone frame's title;
 Can be divided as two parts  like screen (red  line and has menu) and keys buttons).
