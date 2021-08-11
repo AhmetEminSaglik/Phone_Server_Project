@@ -35,6 +35,7 @@ Phone can be divided as two parts  like screen (red  line and has menu) and keys
 <hr/>
 
 <h3> <b>Let's Learn What Can We Do In This Project : </b></h3>
+
 - When we run the project , two phones are created as "1" and "2".
 - "1" phone's screen  is MainMenuScreen.
 - When we go through  "Contact" from MainMenuScreen then we can see screen as "2" phone's screen which is ContactScreen.
@@ -96,7 +97,7 @@ Phone can be divided as two parts  like screen (red  line and has menu) and keys
 <hr/>
 
 
--Now it is time to look call history. So We go through "Call" option which is in MainMenuScreen.
+- Now it is time to look call history. So We go through "Call" option which is in MainMenuScreen.
 
 <br/>![9.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/9.png)
 <br/><br/>
@@ -140,7 +141,7 @@ Phone can be divided as two parts  like screen (red  line and has menu) and keys
 <hr/>
 
 
--We see message for both phone. "2" phone has a additional word which is "Unread" that means that  phone which received message did not see the message.
+- We see message for both phone. "2" phone has a additional word which is "Unread" that means that  phone which received message did not see the message.
 
 <br/>![14.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/14.png)
 <br/><br/>
@@ -197,7 +198,7 @@ Phone can be divided as two parts  like screen (red  line and has menu) and keys
 <hr/>
 
 
--Let's create "3" phone  with using server.
+- Let's create "3" phone  with using server.
 
 <br/>![22.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/22.png)
 <br/><br/>
