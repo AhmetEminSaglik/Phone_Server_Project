@@ -19,7 +19,8 @@ This is server we write number to create phone.
 <hr/>
 
 <h2><b> Phone :</b></h2>
-This is a phone which is created as being has number  "1".
+This is a phone which is created as being has number  "
+".
 <br/>
 <b>NOTE :</b>  Phone number is added to phone frame's title.<br/>
 Phone can be divided as two parts  like screen (red  line and has menu) and keys buttons).
@@ -40,7 +41,8 @@ Phone can be divided as two parts  like screen (red  line and has menu) and keys
 - "1" phone's screen  is MainMenuScreen.
 - When we go through  "Contact" from MainMenuScreen then we can see screen as "2" phone's screen which is ContactScreen.
 
-<br/>![1.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/1.png)
+<br/>![1.png](https://github.com/AhmetEminSaglik/Phone_Server_Project/blob/master/Images%20from%20application/1.png)
+
 <br/><br/>
 <hr/>
 
