@@ -66,7 +66,7 @@ Phone can be divided as two parts  like screen (red  line and has menu) and keys
 
 - Now "1" phone has 1 contact in ContactScreen, "2" phone has not any contact in ContactScreen.
  
-<br/>![4.png](httpshttps://github.com/AhmetEminSaglik/Phone_Server_Project/blob/master/Images%20from%20application/4.png)
+<br/>![4.png](https://github.com/AhmetEminSaglik/Phone_Server_Project/blob/master/Images%20from%20application/4.png)
 <br/><br/>
 <hr/>
 
