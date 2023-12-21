@@ -1,3 +1,9 @@
+## Video Links: 
+Youtube Link : https://www.youtube.com/watch?v=eXUTSYpDYFA&t=5s
+<br>
+Linkedin Link : https://www.linkedin.com/posts/ahmeteminsaglik_java-javafx-algorithm-activity-7072495509675925504-OAlV?utm_source=share&utm_medium=member_desktop
+
+
 <b>This application includes simple calling and messaging features of old mobile phones. And was used FXML and JAXB to create this project.</b>
 <br/><br/><br/>
 
