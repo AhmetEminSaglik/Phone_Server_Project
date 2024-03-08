@@ -24,11 +24,11 @@ This is server we write number to create phone.
 
 <hr/>
 
-<h2><b> Phone :</b></h2>
+<h2><b> phone :</b></h2>
 This is a phone which is created as being has number  "1".
 <br/>
-<b>NOTE :</b>  Phone number is added to phone frame's title.<br/>
-Phone can be divided as two parts  like screen (red  line and has menu) and keys buttons).
+<b>NOTE :</b>  phone number is added to phone frame's title.<br/>
+phone can be divided as two parts  like screen (red  line and has menu) and keys buttons).
 
 <h3><b> Features :</b></h3>
 
@@ -57,8 +57,8 @@ Phone can be divided as two parts  like screen (red  line and has menu) and keys
 <hr/>
 
 
-- We see "Name", "Surname" and "Phone No". I wrote some informations to here. 
-- By the way Phone No texfield just can be wrote numbers,
+- We see "Name", "Surname" and "phone No". I wrote some informations to here. 
+- By the way phone No texfield just can be wrote numbers,
 - When we press the button which is under "Select" writing then it is saved.
 
 <br/>![3.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/3.png)
@@ -224,7 +224,7 @@ Phone can be divided as two parts  like screen (red  line and has menu) and keys
 <hr/>
 
 
-- Now we write here ("2" phone where is written as "Enter Phone Number" with gray color) phone number that we want to call. 
+- Now we write here ("2" phone where is written as "Enter phone Number" with gray color) phone number that we want to call. 
 
 <br/>![25.png](https://github.com/AhmetEminSaglik/PhoneProject_2/blob/master/Images%20from%20Application/25.png)
 <br/><br/>

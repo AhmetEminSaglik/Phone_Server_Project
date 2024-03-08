@@ -37,5 +37,6 @@
     <orderEntry type="library" name="org.glassfish.jaxb:jaxb-runtime:3.0.2-b01" level="project" />
     <orderEntry type="library" name="javax.activation:activation:1.1.1" level="project" />
     <orderEntry type="library" name="jakarta.xml.bind:jakarta.xml.bind-api:3.0.1" level="project" />
+    <orderEntry type="library" name="javafx-swt" level="project" />
   </component>
 </module>
